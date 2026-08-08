@@ -1,0 +1,51 @@
+{
+  "evalConfig": {
+    "modelSpecs": [
+      {
+        "labelKey": "y"
+      }
+    ],
+    "slicingSpecs": [
+      {},
+      {
+        "featureKeys": [
+          "education"
+        ]
+      },
+      {
+        "featureKeys": [
+          "marital"
+        ]
+      },
+      {
+        "featureKeys": [
+          "job"
+        ]
+      }
+    ],
+    "metricsSpecs": [
+      {
+        "metrics": [
+          {
+            "className": "BinaryAccuracy"
+          },
+          {
+            "className": "AUC"
+          },
+          {
+            "className": "ExampleCount"
+          }
+        ],
+        "modelNames": [
+          ""
+        ]
+      }
+    ]
+  },
+  "version": "0.46.0",
+  "dataLocation": "<user provided PCollection>",
+  "fileFormat": "<unknown>",
+  "modelLocations": {
+    "": "/content/pipelines/bank_marketing_pipeline/Trainer/model/34/Format-Serving"
+  }
+}
