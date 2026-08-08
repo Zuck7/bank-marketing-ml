@@ -1,0 +1,7 @@
+tfx==1.21.0
+pandas
+apache-airflow==2.7.3
+tensorflow==2.15.0
+tensorflow-model-analysis
+tensorflow-data-validation
+witwidget
