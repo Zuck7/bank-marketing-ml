@@ -1,0 +1,1534 @@
+=== DAG TEST RUN OUTPUT ===
+
+STDOUT:
+[[34m2026-08-09T18:01:33.230+0000[0m] {[34mdagbag.py:[0m536} INFO[0m - Filling up the DagBag from /content/airflow/dags[0m
+[[34m2026-08-09T18:01:38.111+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Sequence[~T][0m
+[[34m2026-08-09T18:01:38.237+0000[0m] {[34mbigquery.py:[0m440} INFO[0m - No module named google.cloud.bigquery_storage_v1. As a result, the ReadFromBigQuery transform *CANNOT* be used with `method=DIRECT_READ`.[0m
+[[34m2026-08-09T18:01:38.663+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:38.664+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.345+0000[0m] {[34mmodel_util.py:[0m49} INFO[0m - tensorflow_io is not available: No module named 'tensorflow_io'[0m
+[[34m2026-08-09T18:01:39.346+0000[0m] {[34mmodel_util.py:[0m56} INFO[0m - tensorflow_ranking is not available: No module named 'tensorflow_ranking'[0m
+[[34m2026-08-09T18:01:39.347+0000[0m] {[34mmodel_util.py:[0m61} INFO[0m - tensorflow_text is not available: No module named 'tensorflow_text'[0m
+[[34m2026-08-09T18:01:39.347+0000[0m] {[34mmodel_util.py:[0m66} INFO[0m - tensorflow_decision_forests is not available: No module named 'tensorflow_decision_forests'[0m
+[[34m2026-08-09T18:01:39.348+0000[0m] {[34mmodel_util.py:[0m71} INFO[0m - struct2tensor is not available: No module named 'struct2tensor'[0m
+[[34m2026-08-09T18:01:39.349+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.350+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.351+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.351+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.351+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.352+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.353+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.353+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.354+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.354+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.355+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.356+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.356+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.357+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.358+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.358+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.359+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.359+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.360+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.361+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.361+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.361+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.362+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.363+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.363+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.364+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.366+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.367+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.368+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.369+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.369+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.371+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.371+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.372+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.372+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.373+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.373+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.374+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.374+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.375+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.378+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.379+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.382+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.620+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.621+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.628+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.628+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.629+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.630+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.631+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.632+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.632+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.633+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.633+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.635+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.635+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.636+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.636+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.637+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.637+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.638+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.638+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.752+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.753+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.755+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.755+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.755+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.757+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.758+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.759+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.768+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.769+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.770+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.770+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:01:39.801+0000[0m] {[34mexecutor.py:[0m47} INFO[0m - tensorflow_text is not available.[0m
+[[34m2026-08-09T18:01:39.802+0000[0m] {[34mexecutor.py:[0m47} INFO[0m - tensorflow_recommenders is not available.[0m
+[[34m2026-08-09T18:01:40.165+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Mapping[tensorflow_transform.beam.analyzer_cache.DatasetKey, typing.Mapping[str, tensorflow_transform.nodes.ValueNode]][0m
+[[34m2026-08-09T18:01:40.166+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Mapping[tensorflow_transform.beam.analyzer_cache.DatasetKey, tensorflow_transform.beam.analyzer_cache.DatasetCache][0m
+[[34m2026-08-09T18:01:40.213+0000[0m] {[34mcomponent.py:[0m78} INFO[0m - Excluding no splits because exclude_splits is not set.[0m
+[[34m2026-08-09T18:01:40.214+0000[0m] {[34mcomponent.py:[0m81} INFO[0m - Excluding no splits because exclude_splits is not set.[0m
+[[34m2026-08-09T18:01:40.214+0000[0m] {[34mcomponent.py:[0m86} INFO[0m - Excluding no splits because exclude_splits is not set.[0m
+[[34m2026-08-09T18:01:40.225+0000[0m] {[34mudf_utils.py:[0m230} INFO[0m - Generating ephemeral wheel package for '/content/drive/MyDrive/COMP315_Project/modules/transform_module.py' (including modules: ['transform_module', 'trainer_module']).[0m
+[[34m2026-08-09T18:01:40.228+0000[0m] {[34mudf_utils.py:[0m235} INFO[0m - User module package has hash fingerprint version f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c.[0m
+[[34m2026-08-09T18:01:40.229+0000[0m] {[34mudf_utils.py:[0m250} INFO[0m - Executing: ['/content/tfx_env/bin/python3.10', '/tmp/tmpx694t8wz/_tfx_generated_setup.py', 'bdist_wheel', '--bdist-dir', '/tmp/tmpd1qcuvp7', '--dist-dir', '/tmp/tmpfccord6v'][0m
+running bdist_wheel
+running build
+running build_py
+creating build/lib
+copying transform_module.py -> build/lib
+copying trainer_module.py -> build/lib
+installing to /tmp/tmpd1qcuvp7
+running install
+running install_lib
+copying build/lib/trainer_module.py -> /tmp/tmpd1qcuvp7/.
+copying build/lib/transform_module.py -> /tmp/tmpd1qcuvp7/.
+running install_egg_info
+running egg_info
+creating tfx_user_code_Transform.egg-info
+writing tfx_user_code_Transform.egg-info/PKG-INFO
+writing dependency_links to tfx_user_code_Transform.egg-info/dependency_links.txt
+writing top-level names to tfx_user_code_Transform.egg-info/top_level.txt
+writing manifest file 'tfx_user_code_Transform.egg-info/SOURCES.txt'
+reading manifest file 'tfx_user_code_Transform.egg-info/SOURCES.txt'
+writing manifest file 'tfx_user_code_Transform.egg-info/SOURCES.txt'
+Copying tfx_user_code_Transform.egg-info to /tmp/tmpd1qcuvp7/./tfx_user_code_Transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3.10.egg-info
+running install_scripts
+creating /tmp/tmpd1qcuvp7/tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c.dist-info/WHEEL
+creating '/tmp/tmpfccord6v/tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl' and adding '/tmp/tmpd1qcuvp7' to it
+adding 'trainer_module.py'
+adding 'transform_module.py'
+adding 'tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c.dist-info/METADATA'
+adding 'tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c.dist-info/WHEEL'
+adding 'tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c.dist-info/top_level.txt'
+adding 'tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c.dist-info/RECORD'
+removing /tmp/tmpd1qcuvp7
+[[34m2026-08-09T18:01:40.660+0000[0m] {[34mudf_utils.py:[0m268} INFO[0m - Successfully built user code wheel distribution at '/content/airflow/pipelines/bank_marketing_pipeline/_wheels/tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl'; target user module is 'transform_module'.[0m
+[[34m2026-08-09T18:01:40.660+0000[0m] {[34mudf_utils.py:[0m277} INFO[0m - Full user module path is 'transform_module@/content/airflow/pipelines/bank_marketing_pipeline/_wheels/tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl'[0m
+[[34m2026-08-09T18:01:40.666+0000[0m] {[34mudf_utils.py:[0m230} INFO[0m - Generating ephemeral wheel package for '/content/drive/MyDrive/COMP315_Project/modules/trainer_module.py' (including modules: ['transform_module', 'trainer_module']).[0m
+[[34m2026-08-09T18:01:40.671+0000[0m] {[34mudf_utils.py:[0m235} INFO[0m - User module package has hash fingerprint version f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c.[0m
+[[34m2026-08-09T18:01:40.672+0000[0m] {[34mudf_utils.py:[0m250} INFO[0m - Executing: ['/content/tfx_env/bin/python3.10', '/tmp/tmpa7ni163r/_tfx_generated_setup.py', 'bdist_wheel', '--bdist-dir', '/tmp/tmposjzyzsm', '--dist-dir', '/tmp/tmp0m0u0ug8'][0m
+running bdist_wheel
+running build
+running build_py
+creating build/lib
+copying transform_module.py -> build/lib
+copying trainer_module.py -> build/lib
+installing to /tmp/tmposjzyzsm
+running install
+running install_lib
+copying build/lib/trainer_module.py -> /tmp/tmposjzyzsm/.
+copying build/lib/transform_module.py -> /tmp/tmposjzyzsm/.
+running install_egg_info
+running egg_info
+creating tfx_user_code_Trainer.egg-info
+writing tfx_user_code_Trainer.egg-info/PKG-INFO
+writing dependency_links to tfx_user_code_Trainer.egg-info/dependency_links.txt
+writing top-level names to tfx_user_code_Trainer.egg-info/top_level.txt
+writing manifest file 'tfx_user_code_Trainer.egg-info/SOURCES.txt'
+reading manifest file 'tfx_user_code_Trainer.egg-info/SOURCES.txt'
+writing manifest file 'tfx_user_code_Trainer.egg-info/SOURCES.txt'
+Copying tfx_user_code_Trainer.egg-info to /tmp/tmposjzyzsm/./tfx_user_code_Trainer-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3.10.egg-info
+running install_scripts
+creating /tmp/tmposjzyzsm/tfx_user_code_trainer-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c.dist-info/WHEEL
+creating '/tmp/tmp0m0u0ug8/tfx_user_code_trainer-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl' and adding '/tmp/tmposjzyzsm' to it
+adding 'trainer_module.py'
+adding 'transform_module.py'
+adding 'tfx_user_code_trainer-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c.dist-info/METADATA'
+adding 'tfx_user_code_trainer-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c.dist-info/WHEEL'
+adding 'tfx_user_code_trainer-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c.dist-info/top_level.txt'
+adding 'tfx_user_code_trainer-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c.dist-info/RECORD'
+removing /tmp/tmposjzyzsm
+[[34m2026-08-09T18:01:41.118+0000[0m] {[34mudf_utils.py:[0m268} INFO[0m - Successfully built user code wheel distribution at '/content/airflow/pipelines/bank_marketing_pipeline/_wheels/tfx_user_code_trainer-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl'; target user module is 'trainer_module'.[0m
+[[34m2026-08-09T18:01:41.118+0000[0m] {[34mudf_utils.py:[0m277} INFO[0m - Full user module path is 'trainer_module@/content/airflow/pipelines/bank_marketing_pipeline/_wheels/tfx_user_code_trainer-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl'[0m
+[[34m2026-08-09T18:01:41.174+0000[0m] {[34mdag.py:[0m3966} INFO[0m - dagrun id: bank_marketing_pipeline[0m
+[[34m2026-08-09T18:01:41.189+0000[0m] {[34mdag.py:[0m3982} INFO[0m - created dagrun <DagRun bank_marketing_pipeline @ 2024-01-01T00:00:00+00:00: manual__2024-01-01T00:00:00+00:00, state:running, queued_at: None. externally triggered: False>[0m
+[[34m2026-08-09T18:01:41.203+0000[0m] {[34mdag.py:[0m3930} INFO[0m - *****************************************************[0m
+[[34m2026-08-09T18:01:41.204+0000[0m] {[34mdag.py:[0m3934} INFO[0m - Running task CsvExampleGen[0m
+[2026-08-09 18:01:41,278] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='bank_marketing_pipeline' AIRFLOW_CTX_TASK_ID='CsvExampleGen' AIRFLOW_CTX_EXECUTION_DATE='2024-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-01T00:00:00+00:00'
+[[34m2026-08-09T18:01:41.278+0000[0m] {[34mtaskinstance.py:[0m1662} INFO[0m - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='bank_marketing_pipeline' AIRFLOW_CTX_TASK_ID='CsvExampleGen' AIRFLOW_CTX_EXECUTION_DATE='2024-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-01T00:00:00+00:00'[0m
+[[34m2026-08-09T18:01:41.280+0000[0m] {[34mbase_component_launcher.py:[0m195} INFO[0m - Running driver for CsvExampleGen[0m
+[[34m2026-08-09T18:01:41.307+0000[0m] {[34mmetadata_store.py:[0m119} INFO[0m - MetadataStore with DB connection initialized[0m
+[[34m2026-08-09T18:01:41.308+0000[0m] {[34mutils.py:[0m697} INFO[0m - select span and version = (0, None)[0m
+[[34m2026-08-09T18:01:41.308+0000[0m] {[34mutils.py:[0m706} INFO[0m - latest span and version = (0, None)[0m
+[[34m2026-08-09T18:01:41.391+0000[0m] {[34mbase_component_launcher.py:[0m201} INFO[0m - Running executor for CsvExampleGen[0m
+[[34m2026-08-09T18:01:41.392+0000[0m] {[34mbase_example_gen_executor.py:[0m277} INFO[0m - Generating examples.[0m
+[[34m2026-08-09T18:01:41.394+0000[0m] {[34mpipeline.py:[0m197} INFO[0m - Missing pipeline option (runner). Executing pipeline using the default runner: DirectRunner.[0m
+[[34m2026-08-09T18:01:41.408+0000[0m] {[34mexecutor.py:[0m178} INFO[0m - Processing input csv data /content/drive/MyDrive/COMP315_Project/data/processed/* to TFExample.[0m
+[[34m2026-08-09T18:01:42.068+0000[0m] {[34mstatecache.py:[0m234} INFO[0m - Creating state cache with size 104857600[0m
+[[34m2026-08-09T18:01:53.372+0000[0m] {[34mtfrecordio.py:[0m59} WARNING[0m - Couldn't find python-snappy so the implementation of _TFRecordUtil._masked_crc32c is not as fast as it could be.[0m
+[[34m2026-08-09T18:01:55.583+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:01:55.586+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:01:55.619+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:01:55.622+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:01:55.635+0000[0m] {[34mbase_example_gen_executor.py:[0m305} INFO[0m - Examples generated.[0m
+[[34m2026-08-09T18:01:55.635+0000[0m] {[34mbase_component_launcher.py:[0m211} INFO[0m - Running publisher for CsvExampleGen[0m
+[[34m2026-08-09T18:01:55.640+0000[0m] {[34mmetadata_store.py:[0m119} INFO[0m - MetadataStore with DB connection initialized[0m
+[2026-08-09 18:01:55,653] {python.py:194} INFO - Done. Returned value was: None
+[[34m2026-08-09T18:01:55.653+0000[0m] {[34mpython.py:[0m194} INFO[0m - Done. Returned value was: None[0m
+[2026-08-09 18:01:55,659] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=bank_marketing_pipeline, task_id=CsvExampleGen, execution_date=20240101T000000, start_date=, end_date=20260809T180155
+[[34m2026-08-09T18:01:55.659+0000[0m] {[34mtaskinstance.py:[0m1400} INFO[0m - Marking task as SUCCESS. dag_id=bank_marketing_pipeline, task_id=CsvExampleGen, execution_date=20240101T000000, start_date=, end_date=20260809T180155[0m
+[[34m2026-08-09T18:01:55.677+0000[0m] {[34mdag.py:[0m3938} INFO[0m - CsvExampleGen ran successfully![0m
+[[34m2026-08-09T18:01:55.677+0000[0m] {[34mdag.py:[0m3941} INFO[0m - *****************************************************[0m
+[[34m2026-08-09T18:01:55.678+0000[0m] {[34mdag.py:[0m3930} INFO[0m - *****************************************************[0m
+[[34m2026-08-09T18:01:55.678+0000[0m] {[34mdag.py:[0m3934} INFO[0m - Running task latest_blessed_model_resolver[0m
+[2026-08-09 18:01:55,715] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='bank_marketing_pipeline' AIRFLOW_CTX_TASK_ID='latest_blessed_model_resolver' AIRFLOW_CTX_EXECUTION_DATE='2024-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-01T00:00:00+00:00'
+[[34m2026-08-09T18:01:55.715+0000[0m] {[34mtaskinstance.py:[0m1662} INFO[0m - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='bank_marketing_pipeline' AIRFLOW_CTX_TASK_ID='latest_blessed_model_resolver' AIRFLOW_CTX_EXECUTION_DATE='2024-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-01T00:00:00+00:00'[0m
+[[34m2026-08-09T18:01:55.716+0000[0m] {[34mbase_component_launcher.py:[0m195} INFO[0m - Running driver for latest_blessed_model_resolver[0m
+[[34m2026-08-09T18:01:55.721+0000[0m] {[34mmetadata_store.py:[0m119} INFO[0m - MetadataStore with DB connection initialized[0m
+[[34m2026-08-09T18:01:55.750+0000[0m] {[34mbase_component_launcher.py:[0m211} INFO[0m - Running publisher for latest_blessed_model_resolver[0m
+[[34m2026-08-09T18:01:55.755+0000[0m] {[34mmetadata_store.py:[0m119} INFO[0m - MetadataStore with DB connection initialized[0m
+[2026-08-09 18:01:55,757] {python.py:194} INFO - Done. Returned value was: None
+[[34m2026-08-09T18:01:55.757+0000[0m] {[34mpython.py:[0m194} INFO[0m - Done. Returned value was: None[0m
+[2026-08-09 18:01:55,761] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=bank_marketing_pipeline, task_id=latest_blessed_model_resolver, execution_date=20240101T000000, start_date=, end_date=20260809T180155
+[[34m2026-08-09T18:01:55.761+0000[0m] {[34mtaskinstance.py:[0m1400} INFO[0m - Marking task as SUCCESS. dag_id=bank_marketing_pipeline, task_id=latest_blessed_model_resolver, execution_date=20240101T000000, start_date=, end_date=20260809T180155[0m
+[[34m2026-08-09T18:01:55.775+0000[0m] {[34mdag.py:[0m3938} INFO[0m - latest_blessed_model_resolver ran successfully![0m
+[[34m2026-08-09T18:01:55.775+0000[0m] {[34mdag.py:[0m3941} INFO[0m - *****************************************************[0m
+[[34m2026-08-09T18:01:55.784+0000[0m] {[34mdag.py:[0m3930} INFO[0m - *****************************************************[0m
+[[34m2026-08-09T18:01:55.784+0000[0m] {[34mdag.py:[0m3934} INFO[0m - Running task StatisticsGen[0m
+[2026-08-09 18:01:55,820] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='bank_marketing_pipeline' AIRFLOW_CTX_TASK_ID='StatisticsGen' AIRFLOW_CTX_EXECUTION_DATE='2024-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-01T00:00:00+00:00'
+[[34m2026-08-09T18:01:55.820+0000[0m] {[34mtaskinstance.py:[0m1662} INFO[0m - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='bank_marketing_pipeline' AIRFLOW_CTX_TASK_ID='StatisticsGen' AIRFLOW_CTX_EXECUTION_DATE='2024-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-01T00:00:00+00:00'[0m
+[[34m2026-08-09T18:01:55.821+0000[0m] {[34mbase_component_launcher.py:[0m195} INFO[0m - Running driver for StatisticsGen[0m
+[[34m2026-08-09T18:01:55.827+0000[0m] {[34mmetadata_store.py:[0m119} INFO[0m - MetadataStore with DB connection initialized[0m
+[[34m2026-08-09T18:01:55.868+0000[0m] {[34mbase_component_launcher.py:[0m201} INFO[0m - Running executor for StatisticsGen[0m
+[[34m2026-08-09T18:01:55.869+0000[0m] {[34mtfxio_utils.py:[0m154} INFO[0m - Reading from pattern ['/content/airflow/pipelines/bank_marketing_pipeline/CsvExampleGen/examples/1/Split-train/*'] for split train[0m
+[[34m2026-08-09T18:01:55.869+0000[0m] {[34mtfxio_utils.py:[0m154} INFO[0m - Reading from pattern ['/content/airflow/pipelines/bank_marketing_pipeline/CsvExampleGen/examples/1/Split-eval/*'] for split eval[0m
+[[34m2026-08-09T18:01:55.872+0000[0m] {[34mpipeline.py:[0m197} INFO[0m - Missing pipeline option (runner). Executing pipeline using the default runner: DirectRunner.[0m
+[[34m2026-08-09T18:01:55.882+0000[0m] {[34mexecutor.py:[0m229} INFO[0m - Generating statistics for split train.[0m
+[[34m2026-08-09T18:01:55.941+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Sequence[str][0m
+[[34m2026-08-09T18:01:56.147+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Mapping[tensorflow_data_validation.utils.path.FeaturePath, ForwardRef('schema_pb2.FeatureType')][0m
+[[34m2026-08-09T18:01:56.149+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Mapping[tensorflow_data_validation.utils.path.FeaturePath, ForwardRef('schema_pb2.FeatureType')][0m
+[[34m2026-08-09T18:01:56.151+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Mapping[tensorflow_data_validation.utils.path.FeaturePath, ForwardRef('schema_pb2.FeatureType')][0m
+[[34m2026-08-09T18:01:56.523+0000[0m] {[34mexecutor.py:[0m265} INFO[0m - Statistics for split train written to /content/airflow/pipelines/bank_marketing_pipeline/StatisticsGen/statistics/3/Split-train.[0m
+[[34m2026-08-09T18:01:56.523+0000[0m] {[34mexecutor.py:[0m229} INFO[0m - Generating statistics for split eval.[0m
+[[34m2026-08-09T18:01:56.579+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Sequence[str][0m
+[[34m2026-08-09T18:01:56.761+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Mapping[tensorflow_data_validation.utils.path.FeaturePath, ForwardRef('schema_pb2.FeatureType')][0m
+[[34m2026-08-09T18:01:56.762+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Mapping[tensorflow_data_validation.utils.path.FeaturePath, ForwardRef('schema_pb2.FeatureType')][0m
+[[34m2026-08-09T18:01:56.764+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Mapping[tensorflow_data_validation.utils.path.FeaturePath, ForwardRef('schema_pb2.FeatureType')][0m
+[[34m2026-08-09T18:01:57.159+0000[0m] {[34mexecutor.py:[0m265} INFO[0m - Statistics for split eval written to /content/airflow/pipelines/bank_marketing_pipeline/StatisticsGen/statistics/3/Split-eval.[0m
+[[34m2026-08-09T18:01:58.069+0000[0m] {[34mstatecache.py:[0m234} INFO[0m - Creating state cache with size 104857600[0m
+[[34m2026-08-09T18:01:59.235+0000[0m] {[34mutil.py:[0m598} INFO[0m - BatchElements statistics: element_count=15088 batch_count=26 next_batch_size=864 timings=[(1, 0.0036258697509765625), (2, 0.005426168441772461), (4, 0.003373861312866211), (8, 0.0033686161041259766), (16, 0.0033271312713623047), (32, 0.0035858154296875), (64, 0.004406929016113281), (128, 0.008773088455200195), (256, 0.007727622985839844), (512, 0.024708271026611328), (1000, 0.05355548858642578), (756, 0.019134521484375), (1000, 0.03149604797363281), (921, 0.02193760871887207), (985, 0.030921220779418945), (1000, 0.029986858367919922), (1000, 0.03296852111816406), (1000, 0.029604196548461914), (1000, 0.030213356018066406), (811, 0.03516840934753418), (1000, 0.03434920310974121), (803, 0.0188138484954834), (1000, 0.03188753128051758), (1000, 0.043575286865234375), (788, 0.018233060836791992)][0m
+[[34m2026-08-09T18:02:00.973+0000[0m] {[34mutil.py:[0m598} INFO[0m - BatchElements statistics: element_count=30123 batch_count=42 next_batch_size=1000 timings=[(1, 0.0031807422637939453), (2, 0.0031964778900146484), (4, 0.003347635269165039), (8, 0.0034134387969970703), (16, 0.003275632858276367), (32, 0.0035402774810791016), (64, 0.0038785934448242188), (128, 0.0052449703216552734), (256, 0.0076961517333984375), (512, 0.023047447204589844), (1000, 0.0318911075592041), (760, 0.018628835678100586), (857, 0.029298067092895508), (768, 0.01930975914001465), (846, 0.028306007385253906), (1000, 0.02993941307067871), (850, 0.02320265769958496), (841, 0.030843496322631836), (942, 0.03879141807556152), (1000, 0.03210759162902832), (1000, 0.029842138290405273), (913, 0.02213287353515625), (1000, 0.036040306091308594), (960, 0.02197432518005371), (968, 0.03939342498779297), (860, 0.020560264587402344), (1000, 0.030261993408203125), (1000, 0.030222177505493164), (1000, 0.03117537498474121), (902, 0.021831512451171875), (1000, 0.03170132637023926), (863, 0.03645801544189453), (908, 0.03037858009338379), (1000, 0.033371686935424805), (1000, 0.029594898223876953), (950, 0.020511865615844727), (1000, 0.03078007698059082), (1000, 0.033564090728759766), (1000, 0.030738115310668945), (1000, 0.029570341110229492), (911, 0.020529508590698242)][0m
+[[34m2026-08-09T18:02:02.488+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:02.492+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:02.526+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:02.529+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:02.539+0000[0m] {[34mbase_component_launcher.py:[0m211} INFO[0m - Running publisher for StatisticsGen[0m
+[[34m2026-08-09T18:02:02.544+0000[0m] {[34mmetadata_store.py:[0m119} INFO[0m - MetadataStore with DB connection initialized[0m
+[2026-08-09 18:02:02,556] {python.py:194} INFO - Done. Returned value was: None
+[[34m2026-08-09T18:02:02.556+0000[0m] {[34mpython.py:[0m194} INFO[0m - Done. Returned value was: None[0m
+[2026-08-09 18:02:02,561] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=bank_marketing_pipeline, task_id=StatisticsGen, execution_date=20240101T000000, start_date=, end_date=20260809T180202
+[[34m2026-08-09T18:02:02.561+0000[0m] {[34mtaskinstance.py:[0m1400} INFO[0m - Marking task as SUCCESS. dag_id=bank_marketing_pipeline, task_id=StatisticsGen, execution_date=20240101T000000, start_date=, end_date=20260809T180202[0m
+[[34m2026-08-09T18:02:02.574+0000[0m] {[34mdag.py:[0m3938} INFO[0m - StatisticsGen ran successfully![0m
+[[34m2026-08-09T18:02:02.575+0000[0m] {[34mdag.py:[0m3941} INFO[0m - *****************************************************[0m
+[[34m2026-08-09T18:02:02.583+0000[0m] {[34mdag.py:[0m3930} INFO[0m - *****************************************************[0m
+[[34m2026-08-09T18:02:02.583+0000[0m] {[34mdag.py:[0m3934} INFO[0m - Running task SchemaGen[0m
+[2026-08-09 18:02:02,622] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='bank_marketing_pipeline' AIRFLOW_CTX_TASK_ID='SchemaGen' AIRFLOW_CTX_EXECUTION_DATE='2024-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-01T00:00:00+00:00'
+[[34m2026-08-09T18:02:02.622+0000[0m] {[34mtaskinstance.py:[0m1662} INFO[0m - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='bank_marketing_pipeline' AIRFLOW_CTX_TASK_ID='SchemaGen' AIRFLOW_CTX_EXECUTION_DATE='2024-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-01T00:00:00+00:00'[0m
+[[34m2026-08-09T18:02:02.623+0000[0m] {[34mbase_component_launcher.py:[0m195} INFO[0m - Running driver for SchemaGen[0m
+[[34m2026-08-09T18:02:02.628+0000[0m] {[34mmetadata_store.py:[0m119} INFO[0m - MetadataStore with DB connection initialized[0m
+[[34m2026-08-09T18:02:02.668+0000[0m] {[34mbase_component_launcher.py:[0m201} INFO[0m - Running executor for SchemaGen[0m
+[[34m2026-08-09T18:02:02.669+0000[0m] {[34mexecutor.py:[0m77} INFO[0m - Processing schema from statistics for split train.[0m
+[[34m2026-08-09T18:02:02.671+0000[0m] {[34mexecutor.py:[0m77} INFO[0m - Processing schema from statistics for split eval.[0m
+[[34m2026-08-09T18:02:02.675+0000[0m] {[34mexecutor.py:[0m93} INFO[0m - Schema written to /content/airflow/pipelines/bank_marketing_pipeline/SchemaGen/schema/4/schema.pbtxt.[0m
+[[34m2026-08-09T18:02:02.675+0000[0m] {[34mbase_component_launcher.py:[0m211} INFO[0m - Running publisher for SchemaGen[0m
+[[34m2026-08-09T18:02:02.680+0000[0m] {[34mmetadata_store.py:[0m119} INFO[0m - MetadataStore with DB connection initialized[0m
+[2026-08-09 18:02:02,692] {python.py:194} INFO - Done. Returned value was: None
+[[34m2026-08-09T18:02:02.692+0000[0m] {[34mpython.py:[0m194} INFO[0m - Done. Returned value was: None[0m
+[2026-08-09 18:02:02,697] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=bank_marketing_pipeline, task_id=SchemaGen, execution_date=20240101T000000, start_date=, end_date=20260809T180202
+[[34m2026-08-09T18:02:02.697+0000[0m] {[34mtaskinstance.py:[0m1400} INFO[0m - Marking task as SUCCESS. dag_id=bank_marketing_pipeline, task_id=SchemaGen, execution_date=20240101T000000, start_date=, end_date=20260809T180202[0m
+[[34m2026-08-09T18:02:02.709+0000[0m] {[34mdag.py:[0m3938} INFO[0m - SchemaGen ran successfully![0m
+[[34m2026-08-09T18:02:02.709+0000[0m] {[34mdag.py:[0m3941} INFO[0m - *****************************************************[0m
+[[34m2026-08-09T18:02:02.717+0000[0m] {[34mdag.py:[0m3930} INFO[0m - *****************************************************[0m
+[[34m2026-08-09T18:02:02.718+0000[0m] {[34mdag.py:[0m3934} INFO[0m - Running task ExampleValidator[0m
+[2026-08-09 18:02:02,754] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='bank_marketing_pipeline' AIRFLOW_CTX_TASK_ID='ExampleValidator' AIRFLOW_CTX_EXECUTION_DATE='2024-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-01T00:00:00+00:00'
+[[34m2026-08-09T18:02:02.754+0000[0m] {[34mtaskinstance.py:[0m1662} INFO[0m - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='bank_marketing_pipeline' AIRFLOW_CTX_TASK_ID='ExampleValidator' AIRFLOW_CTX_EXECUTION_DATE='2024-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-01T00:00:00+00:00'[0m
+[[34m2026-08-09T18:02:02.755+0000[0m] {[34mbase_component_launcher.py:[0m195} INFO[0m - Running driver for ExampleValidator[0m
+[[34m2026-08-09T18:02:02.761+0000[0m] {[34mmetadata_store.py:[0m119} INFO[0m - MetadataStore with DB connection initialized[0m
+[[34m2026-08-09T18:02:02.803+0000[0m] {[34mbase_component_launcher.py:[0m201} INFO[0m - Running executor for ExampleValidator[0m
+[[34m2026-08-09T18:02:02.809+0000[0m] {[34mexecutor.py:[0m167} INFO[0m - Validating schema against the computed statistics for split train.[0m
+[[34m2026-08-09T18:02:02.812+0000[0m] {[34mexecutor.py:[0m197} INFO[0m - Anomalies alerts created for split train.[0m
+[[34m2026-08-09T18:02:02.813+0000[0m] {[34mexecutor.py:[0m199} INFO[0m - Validation complete for split train. Anomalies written to /content/airflow/pipelines/bank_marketing_pipeline/ExampleValidator/anomalies/5/Split-train.[0m
+[[34m2026-08-09T18:02:02.813+0000[0m] {[34mexecutor.py:[0m167} INFO[0m - Validating schema against the computed statistics for split eval.[0m
+[[34m2026-08-09T18:02:02.816+0000[0m] {[34mexecutor.py:[0m197} INFO[0m - Anomalies alerts created for split eval.[0m
+[[34m2026-08-09T18:02:02.816+0000[0m] {[34mexecutor.py:[0m199} INFO[0m - Validation complete for split eval. Anomalies written to /content/airflow/pipelines/bank_marketing_pipeline/ExampleValidator/anomalies/5/Split-eval.[0m
+[[34m2026-08-09T18:02:02.817+0000[0m] {[34mbase_component_launcher.py:[0m211} INFO[0m - Running publisher for ExampleValidator[0m
+[[34m2026-08-09T18:02:02.823+0000[0m] {[34mmetadata_store.py:[0m119} INFO[0m - MetadataStore with DB connection initialized[0m
+[2026-08-09 18:02:02,834] {python.py:194} INFO - Done. Returned value was: None
+[[34m2026-08-09T18:02:02.834+0000[0m] {[34mpython.py:[0m194} INFO[0m - Done. Returned value was: None[0m
+[2026-08-09 18:02:02,839] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=bank_marketing_pipeline, task_id=ExampleValidator, execution_date=20240101T000000, start_date=, end_date=20260809T180202
+[[34m2026-08-09T18:02:02.839+0000[0m] {[34mtaskinstance.py:[0m1400} INFO[0m - Marking task as SUCCESS. dag_id=bank_marketing_pipeline, task_id=ExampleValidator, execution_date=20240101T000000, start_date=, end_date=20260809T180202[0m
+[[34m2026-08-09T18:02:02.851+0000[0m] {[34mdag.py:[0m3938} INFO[0m - ExampleValidator ran successfully![0m
+[[34m2026-08-09T18:02:02.852+0000[0m] {[34mdag.py:[0m3941} INFO[0m - *****************************************************[0m
+[[34m2026-08-09T18:02:02.852+0000[0m] {[34mdag.py:[0m3930} INFO[0m - *****************************************************[0m
+[[34m2026-08-09T18:02:02.852+0000[0m] {[34mdag.py:[0m3934} INFO[0m - Running task Transform[0m
+[2026-08-09 18:02:02,891] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='bank_marketing_pipeline' AIRFLOW_CTX_TASK_ID='Transform' AIRFLOW_CTX_EXECUTION_DATE='2024-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-01T00:00:00+00:00'
+[[34m2026-08-09T18:02:02.891+0000[0m] {[34mtaskinstance.py:[0m1662} INFO[0m - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='bank_marketing_pipeline' AIRFLOW_CTX_TASK_ID='Transform' AIRFLOW_CTX_EXECUTION_DATE='2024-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-01T00:00:00+00:00'[0m
+[[34m2026-08-09T18:02:02.892+0000[0m] {[34mbase_component_launcher.py:[0m195} INFO[0m - Running driver for Transform[0m
+[[34m2026-08-09T18:02:02.897+0000[0m] {[34mmetadata_store.py:[0m119} INFO[0m - MetadataStore with DB connection initialized[0m
+[[34m2026-08-09T18:02:02.948+0000[0m] {[34mbase_component_launcher.py:[0m201} INFO[0m - Running executor for Transform[0m
+[[34m2026-08-09T18:02:02.949+0000[0m] {[34mexecutor_utils.py:[0m128} INFO[0m - Analyze the 'train' split and transform all splits when splits_config is not set.[0m
+[[34m2026-08-09T18:02:02.950+0000[0m] {[34mudf_utils.py:[0m48} INFO[0m - udf_utils.get_fn {'module_file': None, 'module_path': 'transform_module@/content/airflow/pipelines/bank_marketing_pipeline/_wheels/tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl', 'preprocessing_fn': None} 'preprocessing_fn'[0m
+[[34m2026-08-09T18:02:02.951+0000[0m] {[34mudf_utils.py:[0m340} INFO[0m - Installing '/content/airflow/pipelines/bank_marketing_pipeline/_wheels/tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl' to a temporary directory.[0m
+[[34m2026-08-09T18:02:02.951+0000[0m] {[34mudf_utils.py:[0m347} INFO[0m - Executing: ['/content/tfx_env/bin/python3.10', '-m', 'pip', 'install', '--target', '/tmp/tmp9benakny', '/content/airflow/pipelines/bank_marketing_pipeline/_wheels/tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl'][0m
+Processing ./airflow/pipelines/bank_marketing_pipeline/_wheels/tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl
+Installing collected packages: tfx-user-code-transform
+Successfully installed tfx-user-code-transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c
+[[34m2026-08-09T18:02:07.358+0000[0m] {[34mudf_utils.py:[0m349} INFO[0m - Successfully installed '/content/airflow/pipelines/bank_marketing_pipeline/_wheels/tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl'.[0m
+[[34m2026-08-09T18:02:07.391+0000[0m] {[34mudf_utils.py:[0m48} INFO[0m - udf_utils.get_fn {'module_file': None, 'module_path': 'transform_module@/content/airflow/pipelines/bank_marketing_pipeline/_wheels/tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl', 'stats_options_updater_fn': None} 'stats_options_updater_fn'[0m
+[[34m2026-08-09T18:02:07.392+0000[0m] {[34mudf_utils.py:[0m340} INFO[0m - Installing '/content/airflow/pipelines/bank_marketing_pipeline/_wheels/tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl' to a temporary directory.[0m
+[[34m2026-08-09T18:02:07.392+0000[0m] {[34mudf_utils.py:[0m347} INFO[0m - Executing: ['/content/tfx_env/bin/python3.10', '-m', 'pip', 'install', '--target', '/tmp/tmp09u3tom8', '/content/airflow/pipelines/bank_marketing_pipeline/_wheels/tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl'][0m
+Processing ./airflow/pipelines/bank_marketing_pipeline/_wheels/tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl
+Installing collected packages: tfx-user-code-transform
+Successfully installed tfx-user-code-transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c
+[[34m2026-08-09T18:02:10.460+0000[0m] {[34mudf_utils.py:[0m349} INFO[0m - Successfully installed '/content/airflow/pipelines/bank_marketing_pipeline/_wheels/tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl'.[0m
+[[34m2026-08-09T18:02:10.465+0000[0m] {[34mudf_utils.py:[0m340} INFO[0m - Installing '/content/airflow/pipelines/bank_marketing_pipeline/_wheels/tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl' to a temporary directory.[0m
+[[34m2026-08-09T18:02:10.465+0000[0m] {[34mudf_utils.py:[0m347} INFO[0m - Executing: ['/content/tfx_env/bin/python3.10', '-m', 'pip', 'install', '--target', '/tmp/tmp3ua0wzl3', '/content/airflow/pipelines/bank_marketing_pipeline/_wheels/tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl'][0m
+Processing ./airflow/pipelines/bank_marketing_pipeline/_wheels/tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl
+Installing collected packages: tfx-user-code-transform
+Successfully installed tfx-user-code-transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c
+[[34m2026-08-09T18:02:13.131+0000[0m] {[34mudf_utils.py:[0m349} INFO[0m - Successfully installed '/content/airflow/pipelines/bank_marketing_pipeline/_wheels/tfx_user_code_transform-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl'.[0m
+[[34m2026-08-09T18:02:13.139+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature age has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.139+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature balance has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.139+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature campaign has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.140+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature contact has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.140+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature day has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.140+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature default has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.140+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature duration has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.140+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature education has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.140+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature housing has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.141+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature job has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.141+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature loan has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.141+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature marital has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.141+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature month has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.141+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature pdays has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.142+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature poutcome has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.142+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature previous has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.142+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature y has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.286+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:13.338+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:13.368+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:13.397+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:13.426+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:13.456+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:13.486+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:13.516+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:13.544+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:13.691+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature age has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.691+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature balance has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.692+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature campaign has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.692+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature contact has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.692+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature day has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.692+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature default has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.692+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature duration has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.693+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature education has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.693+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature housing has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.693+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature job has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.693+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature loan has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.693+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature marital has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.694+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature month has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.694+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature pdays has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.694+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature poutcome has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.694+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature previous has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.694+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature y has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:13.830+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:13.859+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:13.887+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:13.916+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:13.949+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:13.979+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:14.009+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:14.037+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:14.074+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:14.353+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:14.382+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:14.414+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:14.442+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:14.471+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:14.499+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:14.527+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:14.556+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:14.587+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:14.717+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature age has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.718+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature balance has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.718+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature campaign has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.718+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature contact has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.718+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature day has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.719+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature default has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.719+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature duration has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.719+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature education has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.719+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature housing has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.719+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature job has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.720+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature loan has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.720+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature marital has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.720+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature month has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.720+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature pdays has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.720+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature poutcome has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.721+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature previous has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.721+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature y has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.722+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature age has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.722+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature balance has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.722+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature campaign has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.722+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature contact has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.723+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature day has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.723+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature default has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.723+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature duration has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.723+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature education has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.723+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature housing has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.724+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature job has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.724+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature loan has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.724+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature marital has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.724+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature month has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.724+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature pdays has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.725+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature poutcome has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.725+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature previous has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.725+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature y has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.726+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature age has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.726+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature balance has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.726+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature campaign has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.726+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature contact has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.726+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature day has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.727+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature default has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.727+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature duration has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.727+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature education has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.727+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature housing has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.727+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature job has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.727+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature loan has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.728+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature marital has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.728+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature month has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.728+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature pdays has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.729+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature poutcome has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.729+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature previous has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.729+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature y has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.730+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature age has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.731+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature balance has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.731+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature campaign has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.731+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature contact has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.731+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature day has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.731+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature default has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.732+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature duration has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.732+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature education has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.732+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature housing has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.732+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature job has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.732+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature loan has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.732+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature marital has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.733+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature month has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.733+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature pdays has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.733+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature poutcome has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.733+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature previous has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.733+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature y has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.734+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature age has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.734+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature balance has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.734+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature campaign has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.734+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature contact has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.735+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature day has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.735+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature default has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.735+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature duration has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.735+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature education has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.735+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature housing has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.736+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature job has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.736+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature loan has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.736+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature marital has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.736+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature month has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.736+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature pdays has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.736+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature poutcome has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.737+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature previous has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.737+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature y has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:14.739+0000[0m] {[34mpipeline.py:[0m197} INFO[0m - Missing pipeline option (runner). Executing pipeline using the default runner: DirectRunner.[0m
+[[34m2026-08-09T18:02:14.901+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:14.930+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:14.958+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:14.989+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:15.018+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:15.048+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:15.077+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:15.117+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:15.150+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:15.265+0000[0m] {[34mgraph_tools.py:[0m592} WARNING[0m - Tables initialized inside a tf.function  will be re-initialized on every invocation of the function. This  re-initialization can have significant impact on performance. Consider lifting  them out of the graph context using  `tf.init_scope`.: compute_and_apply_vocabulary/apply_vocab/text_file_init/InitializeTableFromTextFileV2[0m
+[[34m2026-08-09T18:02:15.265+0000[0m] {[34mgraph_tools.py:[0m592} WARNING[0m - Tables initialized inside a tf.function  will be re-initialized on every invocation of the function. This  re-initialization can have significant impact on performance. Consider lifting  them out of the graph context using  `tf.init_scope`.: compute_and_apply_vocabulary_1/apply_vocab/text_file_init/InitializeTableFromTextFileV2[0m
+[[34m2026-08-09T18:02:15.265+0000[0m] {[34mgraph_tools.py:[0m592} WARNING[0m - Tables initialized inside a tf.function  will be re-initialized on every invocation of the function. This  re-initialization can have significant impact on performance. Consider lifting  them out of the graph context using  `tf.init_scope`.: compute_and_apply_vocabulary_2/apply_vocab/text_file_init/InitializeTableFromTextFileV2[0m
+[[34m2026-08-09T18:02:15.266+0000[0m] {[34mgraph_tools.py:[0m592} WARNING[0m - Tables initialized inside a tf.function  will be re-initialized on every invocation of the function. This  re-initialization can have significant impact on performance. Consider lifting  them out of the graph context using  `tf.init_scope`.: compute_and_apply_vocabulary_3/apply_vocab/text_file_init/InitializeTableFromTextFileV2[0m
+[[34m2026-08-09T18:02:15.266+0000[0m] {[34mgraph_tools.py:[0m592} WARNING[0m - Tables initialized inside a tf.function  will be re-initialized on every invocation of the function. This  re-initialization can have significant impact on performance. Consider lifting  them out of the graph context using  `tf.init_scope`.: compute_and_apply_vocabulary_4/apply_vocab/text_file_init/InitializeTableFromTextFileV2[0m
+[[34m2026-08-09T18:02:15.266+0000[0m] {[34mgraph_tools.py:[0m592} WARNING[0m - Tables initialized inside a tf.function  will be re-initialized on every invocation of the function. This  re-initialization can have significant impact on performance. Consider lifting  them out of the graph context using  `tf.init_scope`.: compute_and_apply_vocabulary_5/apply_vocab/text_file_init/InitializeTableFromTextFileV2[0m
+[[34m2026-08-09T18:02:15.266+0000[0m] {[34mgraph_tools.py:[0m592} WARNING[0m - Tables initialized inside a tf.function  will be re-initialized on every invocation of the function. This  re-initialization can have significant impact on performance. Consider lifting  them out of the graph context using  `tf.init_scope`.: compute_and_apply_vocabulary_6/apply_vocab/text_file_init/InitializeTableFromTextFileV2[0m
+[[34m2026-08-09T18:02:15.267+0000[0m] {[34mgraph_tools.py:[0m592} WARNING[0m - Tables initialized inside a tf.function  will be re-initialized on every invocation of the function. This  re-initialization can have significant impact on performance. Consider lifting  them out of the graph context using  `tf.init_scope`.: compute_and_apply_vocabulary_7/apply_vocab/text_file_init/InitializeTableFromTextFileV2[0m
+[[34m2026-08-09T18:02:15.267+0000[0m] {[34mgraph_tools.py:[0m592} WARNING[0m - Tables initialized inside a tf.function  will be re-initialized on every invocation of the function. This  re-initialization can have significant impact on performance. Consider lifting  them out of the graph context using  `tf.init_scope`.: compute_and_apply_vocabulary_8/apply_vocab/text_file_init/InitializeTableFromTextFileV2[0m
+[[34m2026-08-09T18:02:15.461+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:15.490+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:15.519+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:15.547+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:15.575+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:15.604+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:15.634+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:15.669+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:15.698+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:15.820+0000[0m] {[34mgraph_tools.py:[0m592} WARNING[0m - Tables initialized inside a tf.function  will be re-initialized on every invocation of the function. This  re-initialization can have significant impact on performance. Consider lifting  them out of the graph context using  `tf.init_scope`.: compute_and_apply_vocabulary/apply_vocab/text_file_init/InitializeTableFromTextFileV2[0m
+[[34m2026-08-09T18:02:15.821+0000[0m] {[34mgraph_tools.py:[0m592} WARNING[0m - Tables initialized inside a tf.function  will be re-initialized on every invocation of the function. This  re-initialization can have significant impact on performance. Consider lifting  them out of the graph context using  `tf.init_scope`.: compute_and_apply_vocabulary_1/apply_vocab/text_file_init/InitializeTableFromTextFileV2[0m
+[[34m2026-08-09T18:02:15.821+0000[0m] {[34mgraph_tools.py:[0m592} WARNING[0m - Tables initialized inside a tf.function  will be re-initialized on every invocation of the function. This  re-initialization can have significant impact on performance. Consider lifting  them out of the graph context using  `tf.init_scope`.: compute_and_apply_vocabulary_2/apply_vocab/text_file_init/InitializeTableFromTextFileV2[0m
+[[34m2026-08-09T18:02:15.821+0000[0m] {[34mgraph_tools.py:[0m592} WARNING[0m - Tables initialized inside a tf.function  will be re-initialized on every invocation of the function. This  re-initialization can have significant impact on performance. Consider lifting  them out of the graph context using  `tf.init_scope`.: compute_and_apply_vocabulary_3/apply_vocab/text_file_init/InitializeTableFromTextFileV2[0m
+[[34m2026-08-09T18:02:15.822+0000[0m] {[34mgraph_tools.py:[0m592} WARNING[0m - Tables initialized inside a tf.function  will be re-initialized on every invocation of the function. This  re-initialization can have significant impact on performance. Consider lifting  them out of the graph context using  `tf.init_scope`.: compute_and_apply_vocabulary_4/apply_vocab/text_file_init/InitializeTableFromTextFileV2[0m
+[[34m2026-08-09T18:02:15.822+0000[0m] {[34mgraph_tools.py:[0m592} WARNING[0m - Tables initialized inside a tf.function  will be re-initialized on every invocation of the function. This  re-initialization can have significant impact on performance. Consider lifting  them out of the graph context using  `tf.init_scope`.: compute_and_apply_vocabulary_5/apply_vocab/text_file_init/InitializeTableFromTextFileV2[0m
+[[34m2026-08-09T18:02:15.822+0000[0m] {[34mgraph_tools.py:[0m592} WARNING[0m - Tables initialized inside a tf.function  will be re-initialized on every invocation of the function. This  re-initialization can have significant impact on performance. Consider lifting  them out of the graph context using  `tf.init_scope`.: compute_and_apply_vocabulary_6/apply_vocab/text_file_init/InitializeTableFromTextFileV2[0m
+[[34m2026-08-09T18:02:15.822+0000[0m] {[34mgraph_tools.py:[0m592} WARNING[0m - Tables initialized inside a tf.function  will be re-initialized on every invocation of the function. This  re-initialization can have significant impact on performance. Consider lifting  them out of the graph context using  `tf.init_scope`.: compute_and_apply_vocabulary_7/apply_vocab/text_file_init/InitializeTableFromTextFileV2[0m
+[[34m2026-08-09T18:02:15.822+0000[0m] {[34mgraph_tools.py:[0m592} WARNING[0m - Tables initialized inside a tf.function  will be re-initialized on every invocation of the function. This  re-initialization can have significant impact on performance. Consider lifting  them out of the graph context using  `tf.init_scope`.: compute_and_apply_vocabulary_8/apply_vocab/text_file_init/InitializeTableFromTextFileV2[0m
+[[34m2026-08-09T18:02:15.970+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Sequence[str][0m
+[[34m2026-08-09T18:02:16.155+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:16.195+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:16.224+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:16.255+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:16.285+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:16.315+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:16.345+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:16.375+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:16.405+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:23.171+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:23.212+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:23.257+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:23.297+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:23.337+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:23.376+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:23.414+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:23.459+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:23.510+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:25.942+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Sequence[str][0m
+[[34m2026-08-09T18:02:25.985+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature age has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.985+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature balance has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.986+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature campaign has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.986+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature contact has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.986+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature day has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.986+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature default has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.986+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature duration has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.986+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature education has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.987+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature housing has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.987+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature job has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.987+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature loan has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.987+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature marital has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.987+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature month has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.988+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature pdays has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.988+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature poutcome has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.988+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature previous has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.988+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature y has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.989+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature age has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.989+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature balance has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.989+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature campaign has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.989+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature contact has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.989+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature day has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.990+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature default has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.990+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature duration has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.990+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature education has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.990+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature housing has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.990+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature job has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.991+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature loan has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.991+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature marital has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.991+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature month has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.991+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature pdays has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.991+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature poutcome has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.991+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature previous has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:25.992+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature y has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.175+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Sequence[str][0m
+[[34m2026-08-09T18:02:26.212+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature age has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.213+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature balance has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.213+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature campaign has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.213+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature contact has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.213+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature day has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.213+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature default has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.214+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature duration has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.214+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature education has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.214+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature housing has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.214+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature job has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.214+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature loan has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.215+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature marital has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.215+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature month has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.215+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature pdays has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.215+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature poutcome has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.215+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature previous has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.215+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature y has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.216+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature age has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.216+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature balance has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.216+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature campaign has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.217+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature contact has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.217+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature day has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.217+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature default has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.217+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature duration has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.217+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature education has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.218+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature housing has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.218+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature job has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.218+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature loan has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.218+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature marital has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.218+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature month has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.219+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature pdays has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.219+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature poutcome has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.219+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature previous has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:26.219+0000[0m] {[34mtensor_representation_util.py:[0m450} INFO[0m - Feature y has a shape dim {
+  size: 1
+}
+. Setting to DenseTensor.[0m
+[[34m2026-08-09T18:02:33.542+0000[0m] {[34mstatecache.py:[0m234} INFO[0m - Creating state cache with size 104857600[0m
+[[34m2026-08-09T18:02:33.776+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:33.807+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:33.843+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:33.873+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:33.903+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:33.934+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:33.966+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:33.996+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:34.028+0000[0m] {[34manalyzers.py:[0m1880} INFO[0m - If the number of unique tokens is smaller than the provided top_k or approximation error is acceptable, consider using tft.experimental.approximate_vocabulary for a potentially more efficient implementation.[0m
+[[34m2026-08-09T18:02:36.218+0000[0m] {[34mbuilder_impl.py:[0m801} INFO[0m - Assets written to: /content/airflow/pipelines/bank_marketing_pipeline/Transform/transform_graph/6/.temp_path/tftransform_tmp/df9e502b964045daa19229883d6474ff/assets[0m
+[[34m2026-08-09T18:02:40.005+0000[0m] {[34msaved_transform_io.py:[0m166} INFO[0m - struct2tensor is not available.[0m
+[[34m2026-08-09T18:02:40.006+0000[0m] {[34msaved_transform_io.py:[0m166} INFO[0m - tensorflow_decision_forests is not available.[0m
+[[34m2026-08-09T18:02:40.007+0000[0m] {[34msaved_transform_io.py:[0m166} INFO[0m - tensorflow_text is not available.[0m
+[[34m2026-08-09T18:02:42.702+0000[0m] {[34mutil.py:[0m598} INFO[0m - BatchElements statistics: element_count=30123 batch_count=43 next_batch_size=122 timings=[(1, 0.011194944381713867), (2, 0.012440681457519531), (4, 0.010719060897827148), (8, 0.013010501861572266), (16, 0.014303207397460938), (32, 0.014692068099975586), (64, 0.013804197311401367), (128, 0.016282320022583008), (256, 0.021951675415039062), (512, 0.044820547103881836), (1000, 0.06065034866333008), (1000, 0.06471920013427734), (1000, 0.058177947998046875), (1000, 0.059636831283569336), (833, 0.04049420356750488), (997, 0.05886054039001465), (1000, 0.05754661560058594), (884, 0.04406905174255371), (1000, 0.07448101043701172), (960, 0.06562304496765137), (805, 0.05492877960205078), (964, 0.04235100746154785), (1000, 0.07533383369445801), (837, 0.04166150093078613), (764, 0.04947376251220703), (833, 0.05137181282043457), (886, 0.06546473503112793), (1000, 0.05745863914489746), (907, 0.04703974723815918), (895, 0.053061723709106445), (774, 0.0374150276184082), (1000, 0.07974648475646973), (1000, 0.05729365348815918), (1000, 0.05820751190185547), (1000, 0.053098201751708984), (903, 0.04419970512390137), (1000, 0.05632925033569336), (975, 0.046408653259277344), (852, 0.04995131492614746), (969, 0.04902768135070801), (1000, 0.0574951171875), (61, 0.011525869369506836)][0m
+[[34m2026-08-09T18:02:43.684+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:43.687+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:43.721+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:43.723+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:45.762+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:45.765+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:45.802+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:45.805+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:45.847+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:45.849+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:45.885+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:45.888+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:45.925+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:45.927+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:45.965+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:45.968+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:46.006+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:46.009+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:46.047+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:46.050+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:46.089+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:46.092+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:46.652+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:46.655+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:48.380+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:48.383+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:48.420+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:48.423+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:48.461+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:48.464+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:48.502+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:48.505+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:48.541+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:48.544+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:48.583+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:48.586+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:48.621+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:48.625+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:48.663+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:48.666+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:48.704+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:48.707+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:48.744+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:48.747+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:48.785+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:48.789+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:48.830+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:48.834+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:49.463+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:49.465+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:49.531+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:49.535+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:49.590+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:49.593+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:49.644+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:49.647+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:49.699+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:02:49.703+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:02:52.543+0000[0m] {[34mbuilder_impl.py:[0m801} INFO[0m - Assets written to: /content/airflow/pipelines/bank_marketing_pipeline/Transform/transform_graph/6/.temp_path/tftransform_tmp/6d6bc7c128cd4e689a2c212bb9adb968/assets[0m
+[[34m2026-08-09T18:02:54.800+0000[0m] {[34msaved_transform_io.py:[0m166} INFO[0m - struct2tensor is not available.[0m
+[[34m2026-08-09T18:02:54.801+0000[0m] {[34msaved_transform_io.py:[0m166} INFO[0m - tensorflow_decision_forests is not available.[0m
+[[34m2026-08-09T18:02:54.802+0000[0m] {[34msaved_transform_io.py:[0m166} INFO[0m - tensorflow_text is not available.[0m
+[[34m2026-08-09T18:02:57.891+0000[0m] {[34mutil.py:[0m598} INFO[0m - BatchElements statistics: element_count=30123 batch_count=42 next_batch_size=1000 timings=[(1, 0.008417367935180664), (2, 0.008911371231079102), (4, 0.008644342422485352), (8, 0.008822202682495117), (16, 0.01083683967590332), (32, 0.013183355331420898), (64, 0.012844085693359375), (128, 0.016792774200439453), (256, 0.026076555252075195), (512, 0.044474124908447266), (1000, 0.07533001899719238), (971, 0.08551478385925293), (1000, 0.07226800918579102), (1000, 0.0698707103729248), (924, 0.06542754173278809), (1000, 0.0885934829711914), (891, 0.06836390495300293), (1000, 0.07020831108093262), (1000, 0.07034492492675781), (954, 0.06811738014221191), (864, 0.062433481216430664), (838, 0.05977582931518555), (884, 0.06630873680114746), (1000, 0.08100032806396484), (1000, 0.0703117847442627), (813, 0.05903005599975586), (794, 0.05906510353088379), (1000, 0.06984400749206543), (752, 0.05986618995666504), (1000, 0.07065510749816895), (1000, 0.07148432731628418), (1000, 0.07014179229736328), (827, 0.05957841873168945), (892, 0.06288623809814453), (969, 0.07031631469726562), (826, 0.08121609687805176), (931, 0.07045722007751465), (1000, 0.07235980033874512), (1000, 0.0702049732208252), (1000, 0.0717012882232666), (969, 0.07304930686950684)][0m
+[[34m2026-08-09T18:02:58.766+0000[0m] {[34msaved_transform_io.py:[0m166} INFO[0m - struct2tensor is not available.[0m
+[[34m2026-08-09T18:02:58.767+0000[0m] {[34msaved_transform_io.py:[0m166} INFO[0m - tensorflow_decision_forests is not available.[0m
+[[34m2026-08-09T18:02:58.768+0000[0m] {[34msaved_transform_io.py:[0m166} INFO[0m - tensorflow_text is not available.[0m
+[[34m2026-08-09T18:03:00.446+0000[0m] {[34mutil.py:[0m598} INFO[0m - BatchElements statistics: element_count=15088 batch_count=26 next_batch_size=1000 timings=[(1, 0.008329153060913086), (2, 0.007536888122558594), (4, 0.007834672927856445), (8, 0.008401155471801758), (16, 0.008837223052978516), (32, 0.009772300720214844), (64, 0.012716054916381836), (128, 0.017887592315673828), (256, 0.02478790283203125), (512, 0.04087114334106445), (1000, 0.08931279182434082), (1000, 0.0905759334564209), (759, 0.056012868881225586), (1000, 0.0818336009979248), (951, 0.06941866874694824), (940, 0.06763911247253418), (1000, 0.07063937187194824), (1000, 0.07618284225463867), (1000, 0.0743565559387207), (813, 0.05952763557434082), (1000, 0.07030010223388672), (1000, 0.0735163688659668), (751, 0.05493760108947754), (1000, 0.07202696800231934), (850, 0.0633690357208252)][0m
+[[34m2026-08-09T18:03:00.574+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:03:00.577+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:03:01.575+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:03:01.581+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.01 seconds.[0m
+[[34m2026-08-09T18:03:01.621+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:03:01.623+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:03:02.097+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:03:02.100+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:03:02.139+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:03:02.142+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[2026-08-09 18:03:02,485] {python.py:194} INFO - Done. Returned value was: None
+[[34m2026-08-09T18:03:02.485+0000[0m] {[34mpython.py:[0m194} INFO[0m - Done. Returned value was: None[0m
+[2026-08-09 18:03:02,490] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=bank_marketing_pipeline, task_id=Transform, execution_date=20240101T000000, start_date=, end_date=20260809T180302
+[[34m2026-08-09T18:03:02.490+0000[0m] {[34mtaskinstance.py:[0m1400} INFO[0m - Marking task as SUCCESS. dag_id=bank_marketing_pipeline, task_id=Transform, execution_date=20240101T000000, start_date=, end_date=20260809T180302[0m
+[[34m2026-08-09T18:03:02.503+0000[0m] {[34mdag.py:[0m3938} INFO[0m - Transform ran successfully![0m
+[[34m2026-08-09T18:03:02.504+0000[0m] {[34mdag.py:[0m3941} INFO[0m - *****************************************************[0m
+[[34m2026-08-09T18:03:02.511+0000[0m] {[34mdag.py:[0m3930} INFO[0m - *****************************************************[0m
+[[34m2026-08-09T18:03:02.511+0000[0m] {[34mdag.py:[0m3934} INFO[0m - Running task Trainer[0m
+[2026-08-09 18:03:02,560] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='bank_marketing_pipeline' AIRFLOW_CTX_TASK_ID='Trainer' AIRFLOW_CTX_EXECUTION_DATE='2024-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-01T00:00:00+00:00'
+[[34m2026-08-09T18:03:02.560+0000[0m] {[34mtaskinstance.py:[0m1662} INFO[0m - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='bank_marketing_pipeline' AIRFLOW_CTX_TASK_ID='Trainer' AIRFLOW_CTX_EXECUTION_DATE='2024-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-01T00:00:00+00:00'[0m
+[[34m2026-08-09T18:03:02.626+0000[0m] {[34mexamples_utils.py:[0m59} WARNING[0m - Examples artifact does not have payload_format custom property. Falling back to FORMAT_TF_EXAMPLE[0m
+[[34m2026-08-09T18:03:02.626+0000[0m] {[34mexamples_utils.py:[0m59} WARNING[0m - Examples artifact does not have payload_format custom property. Falling back to FORMAT_TF_EXAMPLE[0m
+[[34m2026-08-09T18:03:02.627+0000[0m] {[34mexamples_utils.py:[0m59} WARNING[0m - Examples artifact does not have payload_format custom property. Falling back to FORMAT_TF_EXAMPLE[0m
+Processing ./airflow/pipelines/bank_marketing_pipeline/_wheels/tfx_user_code_trainer-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c-py3-none-any.whl
+Installing collected packages: tfx-user-code-trainer
+Successfully installed tfx-user-code-trainer-0.0+f8ad0b05869a2295c5df003699658ba269b5e95ca2fa20adcf38774eed48d34c
+[[34m2026-08-09T18:03:06.058+0000[0m] {[34mdeprecation.py:[0m50} WARNING[0m - From /content/tfx_env/lib/python3.10/site-packages/tfx_bsl/tfxio/tf_example_record.py:343: parse_example_dataset (from tensorflow.python.data.experimental.ops.parsing_ops) is deprecated and will be removed in a future version.
+Instructions for updating:
+Use `tf.data.Dataset.map(tf.io.parse_example(...))` instead.[0m
+Model: "model"
+__________________________________________________________________________________________________
+ Layer (type)                Output Shape                 Param #   Connected to                  
+==================================================================================================
+ job (InputLayer)            [(None, 1)]                  0         []                            
+                                                                                                  
+ marital (InputLayer)        [(None, 1)]                  0         []                            
+                                                                                                  
+ education (InputLayer)      [(None, 1)]                  0         []                            
+                                                                                                  
+ default (InputLayer)        [(None, 1)]                  0         []                            
+                                                                                                  
+ housing (InputLayer)        [(None, 1)]                  0         []                            
+                                                                                                  
+ loan (InputLayer)           [(None, 1)]                  0         []                            
+                                                                                                  
+ contact (InputLayer)        [(None, 1)]                  0         []                            
+                                                                                                  
+ month (InputLayer)          [(None, 1)]                  0         []                            
+                                                                                                  
+ poutcome (InputLayer)       [(None, 1)]                  0         []                            
+                                                                                                  
+ age_bucket (InputLayer)     [(None, 1)]                  0         []                            
+                                                                                                  
+ embedding (Embedding)       (None, 1, 6)                 78        ['job[0][0]']                 
+                                                                                                  
+ embedding_1 (Embedding)     (None, 1, 2)                 8         ['marital[0][0]']             
+                                                                                                  
+ embedding_2 (Embedding)     (None, 1, 2)                 10        ['education[0][0]']           
+                                                                                                  
+ embedding_3 (Embedding)     (None, 1, 2)                 6         ['default[0][0]']             
+                                                                                                  
+ embedding_4 (Embedding)     (None, 1, 2)                 6         ['housing[0][0]']             
+                                                                                                  
+ embedding_5 (Embedding)     (None, 1, 2)                 6         ['loan[0][0]']                
+                                                                                                  
+ embedding_6 (Embedding)     (None, 1, 2)                 8         ['contact[0][0]']             
+                                                                                                  
+ embedding_7 (Embedding)     (None, 1, 6)                 78        ['month[0][0]']               
+                                                                                                  
+ embedding_8 (Embedding)     (None, 1, 2)                 10        ['poutcome[0][0]']            
+                                                                                                  
+ embedding_9 (Embedding)     (None, 1, 4)                 24        ['age_bucket[0][0]']          
+                                                                                                  
+ age (InputLayer)            [(None, 1)]                  0         []                            
+                                                                                                  
+ balance (InputLayer)        [(None, 1)]                  0         []                            
+                                                                                                  
+ day (InputLayer)            [(None, 1)]                  0         []                            
+                                                                                                  
+ duration (InputLayer)       [(None, 1)]                  0         []                            
+                                                                                                  
+ campaign (InputLayer)       [(None, 1)]                  0         []                            
+                                                                                                  
+ pdays (InputLayer)          [(None, 1)]                  0         []                            
+                                                                                                  
+ previous (InputLayer)       [(None, 1)]                  0         []                            
+                                                                                                  
+ flatten (Flatten)           (None, 6)                    0         ['embedding[0][0]']           
+                                                                                                  
+ flatten_1 (Flatten)         (None, 2)                    0         ['embedding_1[0][0]']         
+                                                                                                  
+ flatten_2 (Flatten)         (None, 2)                    0         ['embedding_2[0][0]']         
+                                                                                                  
+ flatten_3 (Flatten)         (None, 2)                    0         ['embedding_3[0][0]']         
+                                                                                                  
+ flatten_4 (Flatten)         (None, 2)                    0         ['embedding_4[0][0]']         
+                                                                                                  
+ flatten_5 (Flatten)         (None, 2)                    0         ['embedding_5[0][0]']         
+                                                                                                  
+ flatten_6 (Flatten)         (None, 2)                    0         ['embedding_6[0][0]']         
+                                                                                                  
+ flatten_7 (Flatten)         (None, 6)                    0         ['embedding_7[0][0]']         
+                                                                                                  
+ flatten_8 (Flatten)         (None, 2)                    0         ['embedding_8[0][0]']         
+                                                                                                  
+ flatten_9 (Flatten)         (None, 4)                    0         ['embedding_9[0][0]']         
+                                                                                                  
+ concatenate (Concatenate)   (None, 37)                   0         ['age[0][0]',                 
+                                                                     'balance[0][0]',             
+                                                                     'day[0][0]',                 
+                                                                     'duration[0][0]',            
+                                                                     'campaign[0][0]',            
+                                                                     'pdays[0][0]',               
+                                                                     'previous[0][0]',            
+                                                                     'flatten[0][0]',             
+                                                                     'flatten_1[0][0]',           
+                                                                     'flatten_2[0][0]',           
+                                                                     'flatten_3[0][0]',           
+                                                                     'flatten_4[0][0]',           
+                                                                     'flatten_5[0][0]',           
+                                                                     'flatten_6[0][0]',           
+                                                                     'flatten_7[0][0]',           
+                                                                     'flatten_8[0][0]',           
+                                                                     'flatten_9[0][0]']           
+                                                                                                  
+ dense (Dense)               (None, 128)                  4864      ['concatenate[0][0]']         
+                                                                                                  
+ batch_normalization (Batch  (None, 128)                  512       ['dense[0][0]']               
+ Normalization)                                                                                   
+                                                                                                  
+ dropout (Dropout)           (None, 128)                  0         ['batch_normalization[0][0]'] 
+                                                                                                  
+ dense_1 (Dense)             (None, 64)                   8256      ['dropout[0][0]']             
+                                                                                                  
+ batch_normalization_1 (Bat  (None, 64)                   256       ['dense_1[0][0]']             
+ chNormalization)                                                                                 
+                                                                                                  
+ dropout_1 (Dropout)         (None, 64)                   0         ['batch_normalization_1[0][0]'
+                                                                    ]                             
+                                                                                                  
+ dense_2 (Dense)             (None, 32)                   2080      ['dropout_1[0][0]']           
+                                                                                                  
+ dense_3 (Dense)             (None, 1)                    33        ['dense_2[0][0]']             
+                                                                                                  
+==================================================================================================
+Total params: 16235 (63.42 KB)
+Trainable params: 15851 (61.92 KB)
+Non-trainable params: 384 (1.50 KB)
+__________________________________________________________________________________________________
+
+  1/100 [..............................] - ETA: 5:57 - loss: 0.9551 - binary_accuracy: 0.3750 - auc: 0.4062
+  9/100 [=>............................] - ETA: 0s - loss: 0.7845 - binary_accuracy: 0.5052 - auc: 0.7540  
+ 17/100 [====>.........................] - ETA: 0s - loss: 0.6607 - binary_accuracy: 0.6333 - auc: 0.7733
+ 24/100 [======>.......................] - ETA: 0s - loss: 0.5774 - binary_accuracy: 0.7051 - auc: 0.7563
+ 31/100 [========>.....................] - ETA: 0s - loss: 0.5125 - binary_accuracy: 0.7550 - auc: 0.7460
+ 39/100 [==========>...................] - ETA: 0s - loss: 0.4518 - binary_accuracy: 0.7953 - auc: 0.7529
+ 47/100 [=============>................] - ETA: 0s - loss: 0.4043 - binary_accuracy: 0.8231 - auc: 0.7652
+ 55/100 [===============>..............] - ETA: 0s - loss: 0.3711 - binary_accuracy: 0.8409 - auc: 0.7665
+ 63/100 [=================>............] - ETA: 0s - loss: 0.3427 - binary_accuracy: 0.8554 - auc: 0.7767
+ 71/100 [====================>.........] - ETA: 0s - loss: 0.3180 - binary_accuracy: 0.8666 - auc: 0.7986
+ 77/100 [======================>.......] - ETA: 0s - loss: 0.3075 - binary_accuracy: 0.8716 - auc: 0.7925
+ 84/100 [========================>.....] - ETA: 0s - loss: 0.2935 - binary_accuracy: 0.8789 - auc: 0.7973
+ 92/100 [==========================>...] - ETA: 0s - loss: 0.2789 - binary_accuracy: 0.8854 - auc: 0.8073
+100/100 [==============================] - ETA: 0s - loss: 0.2694 - binary_accuracy: 0.8905 - auc: 0.8039
+100/100 [==============================] - 5s 13ms/step - loss: 0.2694 - binary_accuracy: 0.8905 - auc: 0.8039 - val_loss: 0.2955 - val_binary_accuracy: 0.9428 - val_auc: 0.8170
+[[34m2026-08-09T18:03:12.562+0000[0m] {[34msaved_transform_io.py:[0m166} INFO[0m - struct2tensor is not available.[0m
+[[34m2026-08-09T18:03:12.563+0000[0m] {[34msaved_transform_io.py:[0m166} INFO[0m - tensorflow_decision_forests is not available.[0m
+[[34m2026-08-09T18:03:12.564+0000[0m] {[34msaved_transform_io.py:[0m166} INFO[0m - tensorflow_text is not available.[0m
+[[34m2026-08-09T18:03:21.769+0000[0m] {[34mbuilder_impl.py:[0m801} INFO[0m - Assets written to: /content/airflow/pipelines/bank_marketing_pipeline/Trainer/model/7/Format-Serving/assets[0m
+
+Model saved to: /content/airflow/pipelines/bank_marketing_pipeline/Trainer/model/7/Format-Serving
+[2026-08-09 18:03:21,910] {python.py:194} INFO - Done. Returned value was: None
+[[34m2026-08-09T18:03:21.910+0000[0m] {[34mpython.py:[0m194} INFO[0m - Done. Returned value was: None[0m
+[2026-08-09 18:03:21,917] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=bank_marketing_pipeline, task_id=Trainer, execution_date=20240101T000000, start_date=, end_date=20260809T180321
+[[34m2026-08-09T18:03:21.917+0000[0m] {[34mtaskinstance.py:[0m1400} INFO[0m - Marking task as SUCCESS. dag_id=bank_marketing_pipeline, task_id=Trainer, execution_date=20240101T000000, start_date=, end_date=20260809T180321[0m
+[[34m2026-08-09T18:03:21.931+0000[0m] {[34mdag.py:[0m3938} INFO[0m - Trainer ran successfully![0m
+[[34m2026-08-09T18:03:21.932+0000[0m] {[34mdag.py:[0m3941} INFO[0m - *****************************************************[0m
+[[34m2026-08-09T18:03:21.942+0000[0m] {[34mdag.py:[0m3930} INFO[0m - *****************************************************[0m
+[[34m2026-08-09T18:03:21.942+0000[0m] {[34mdag.py:[0m3934} INFO[0m - Running task Evaluator[0m
+[2026-08-09 18:03:21,994] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='bank_marketing_pipeline' AIRFLOW_CTX_TASK_ID='Evaluator' AIRFLOW_CTX_EXECUTION_DATE='2024-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-01T00:00:00+00:00'
+[[34m2026-08-09T18:03:21.994+0000[0m] {[34mtaskinstance.py:[0m1662} INFO[0m - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='bank_marketing_pipeline' AIRFLOW_CTX_TASK_ID='Evaluator' AIRFLOW_CTX_EXECUTION_DATE='2024-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-01T00:00:00+00:00'[0m
+[[34m2026-08-09T18:03:25.018+0000[0m] {[34mpipeline.py:[0m197} INFO[0m - Missing pipeline option (runner). Executing pipeline using the default runner: DirectRunner.[0m
+[[34m2026-08-09T18:03:25.104+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Sequence[str][0m
+[[34m2026-08-09T18:03:25.145+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.145+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.155+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.238+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.238+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.258+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.258+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Sequence[typing.MutableMapping[str, typing.Any]][0m
+[[34m2026-08-09T18:03:25.259+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.259+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Sequence[typing.MutableMapping[str, typing.Any]][0m
+[[34m2026-08-09T18:03:25.261+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.261+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Sequence[typing.MutableMapping[str, typing.Any]][0m
+[[34m2026-08-09T18:03:25.263+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.263+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.273+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.274+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.292+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.293+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Sequence[typing.MutableMapping[str, typing.Any]][0m
+[[34m2026-08-09T18:03:25.293+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.293+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Sequence[typing.MutableMapping[str, typing.Any]][0m
+[[34m2026-08-09T18:03:25.295+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.295+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Sequence[typing.MutableMapping[str, typing.Any]][0m
+[[34m2026-08-09T18:03:25.303+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.303+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Sequence[typing.MutableMapping[str, typing.Any]][0m
+[[34m2026-08-09T18:03:25.304+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.304+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Sequence[typing.MutableMapping[str, typing.Any]][0m
+[[34m2026-08-09T18:03:25.305+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.305+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Sequence[typing.MutableMapping[str, typing.Any]][0m
+[[34m2026-08-09T18:03:25.314+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.315+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.315+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.316+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.317+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:25.317+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:27.221+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:27.222+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:27.224+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:27.231+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:27.232+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:27.233+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:27.234+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:27.235+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:27.235+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.MutableMapping[str, typing.Any][0m
+[[34m2026-08-09T18:03:27.617+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Type[typing.Union[tensorflow_model_analysis.metrics.metric_types.MetricKey, tensorflow_model_analysis.metrics.metric_types.PlotKey, tensorflow_model_analysis.metrics.metric_types.AttributionsKey]][0m
+[[34m2026-08-09T18:03:27.626+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Type[typing.Union[tensorflow_model_analysis.metrics.metric_types.MetricKey, tensorflow_model_analysis.metrics.metric_types.PlotKey, tensorflow_model_analysis.metrics.metric_types.AttributionsKey]][0m
+[[34m2026-08-09T18:03:27.634+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Type[typing.Union[tensorflow_model_analysis.metrics.metric_types.MetricKey, tensorflow_model_analysis.metrics.metric_types.PlotKey, tensorflow_model_analysis.metrics.metric_types.AttributionsKey]][0m
+[[34m2026-08-09T18:03:27.742+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Callable[[typing.Union[tensorflow.python.framework.tensor.Tensor, tensorflow.python.framework.sparse_tensor.SparseTensor, tensorflow.python.ops.ragged.ragged_tensor.RaggedTensor, typing.Dict[str, typing.Union[tensorflow.python.framework.tensor.Tensor, tensorflow.python.framework.sparse_tensor.SparseTensor, tensorflow.python.ops.ragged.ragged_tensor.RaggedTensor]]], typing.Union[tensorflow.python.framework.tensor.Tensor, tensorflow.python.framework.sparse_tensor.SparseTensor, tensorflow.python.ops.ragged.ragged_tensor.RaggedTensor, typing.Dict[str, typing.Union[tensorflow.python.framework.tensor.Tensor, tensorflow.python.framework.sparse_tensor.SparseTensor, tensorflow.python.ops.ragged.ragged_tensor.RaggedTensor]]], typing.Union[tensorflow.python.framework.tensor.Tensor, tensorflow.python.framework.sparse_tensor.SparseTensor, tensorflow.python.ops.ragged.ragged_tensor.RaggedTensor, typing.Dict[str, typing.Union[tensorflow.python.framework.tensor.Tensor, tensorflow.python.framework.sparse_tensor.SparseTensor, tensorflow.python.ops.ragged.ragged_tensor.RaggedTensor]]]], typing.Dict[str, typing.Tuple[typing.Union[tensorflow.python.framework.tensor.Tensor, tensorflow.python.framework.sparse_tensor.SparseTensor, tensorflow.python.ops.ragged.ragged_tensor.RaggedTensor], typing.Union[tensorflow.python.framework.tensor.Tensor, tensorflow.python.framework.sparse_tensor.SparseTensor, tensorflow.python.ops.ragged.ragged_tensor.RaggedTensor]]]][0m
+[[34m2026-08-09T18:03:27.825+0000[0m] {[34mnative_type_compatibility.py:[0m340} INFO[0m - Using Any for unsupported type: typing.Callable[[typing.Union[tensorflow.python.framework.tensor.Tensor, tensorflow.python.framework.sparse_tensor.SparseTensor, tensorflow.python.ops.ragged.ragged_tensor.RaggedTensor, typing.Dict[str, typing.Union[tensorflow.python.framework.tensor.Tensor, tensorflow.python.framework.sparse_tensor.SparseTensor, tensorflow.python.ops.ragged.ragged_tensor.RaggedTensor]]], typing.Union[tensorflow.python.framework.tensor.Tensor, tensorflow.python.framework.sparse_tensor.SparseTensor, tensorflow.python.ops.ragged.ragged_tensor.RaggedTensor, typing.Dict[str, typing.Union[tensorflow.python.framework.tensor.Tensor, tensorflow.python.framework.sparse_tensor.SparseTensor, tensorflow.python.ops.ragged.ragged_tensor.RaggedTensor]]], typing.Union[tensorflow.python.framework.tensor.Tensor, tensorflow.python.framework.sparse_tensor.SparseTensor, tensorflow.python.ops.ragged.ragged_tensor.RaggedTensor, typing.Dict[str, typing.Union[tensorflow.python.framework.tensor.Tensor, tensorflow.python.framework.sparse_tensor.SparseTensor, tensorflow.python.ops.ragged.ragged_tensor.RaggedTensor]]]], typing.Dict[str, typing.Tuple[typing.Union[tensorflow.python.framework.tensor.Tensor, tensorflow.python.framework.sparse_tensor.SparseTensor, tensorflow.python.ops.ragged.ragged_tensor.RaggedTensor], typing.Union[tensorflow.python.framework.tensor.Tensor, tensorflow.python.framework.sparse_tensor.SparseTensor, tensorflow.python.ops.ragged.ragged_tensor.RaggedTensor]]]][0m
+[[34m2026-08-09T18:03:29.017+0000[0m] {[34mstatecache.py:[0m234} INFO[0m - Creating state cache with size 104857600[0m
+[[34m2026-08-09T18:03:58.725+0000[0m] {[34mutil.py:[0m598} INFO[0m - BatchElements statistics: element_count=15088 batch_count=116 next_batch_size=76 timings=[(1, 0.013516426086425781), (2, 0.017893314361572266), (4, 0.02141118049621582), (16, 0.04569840431213379), (32, 0.0658724308013916), (64, 0.10645651817321777), (128, 0.19593286514282227), (246, 0.3562602996826172), (132, 0.18721961975097656), (157, 0.3637065887451172), (139, 0.3100771903991699), (121, 0.2453460693359375), (116, 0.27982378005981445), (117, 0.23767399787902832), (150, 0.3062727451324463), (128, 0.2789466381072998), (126, 0.25138020515441895), (107, 0.2290794849395752), (99, 0.22064590454101562), (112, 0.23779869079589844), (91, 0.246992826461792), (126, 0.1914811134338379), (143, 0.20387983322143555), (116, 0.1602015495300293), (148, 0.22292280197143555), (122, 0.1684281826019287), (123, 0.17538976669311523), (141, 0.2089529037475586), (144, 0.23685550689697266), (143, 0.23600482940673828), (135, 0.18965411186218262), (122, 0.18646812438964844), (102, 0.14264559745788574), (100, 0.14400219917297363), (137, 0.20534944534301758), (110, 0.14995813369750977), (169, 0.25449395179748535), (133, 0.19429898262023926), (139, 0.20789837837219238), (159, 0.209730863571167), (150, 0.20345139503479004), (132, 0.1942451000213623), (113, 0.17427349090576172), (140, 0.1880507469177246), (158, 0.21311402320861816), (144, 0.23047256469726562), (132, 0.20384788513183594), (145, 0.2295229434967041), (171, 0.24436497688293457), (118, 0.16047978401184082), (146, 0.1993718147277832), (127, 0.19136929512023926), (116, 0.18079137802124023), (166, 0.22207403182983398), (121, 0.168229341506958), (154, 0.22905945777893066), (130, 0.18105626106262207), (174, 0.26693153381347656), (170, 0.22946977615356445), (110, 0.1523118019104004), (148, 0.21946144104003906), (135, 0.19503521919250488), (137, 0.22024846076965332), (170, 0.23079133033752441), (144, 0.20621323585510254), (117, 0.17964935302734375), (180, 0.2809004783630371), (137, 0.30167722702026367), (165, 0.35031914710998535), (129, 0.2674734592437744), (149, 0.3263740539550781), (111, 0.24112153053283691), (149, 0.36351656913757324), (117, 0.2896602153778076), (121, 0.2657625675201416), (107, 0.2253119945526123), (166, 0.35445594787597656), (127, 0.2690579891204834), (157, 0.3250584602355957), (112, 0.23812055587768555), (140, 0.3047666549682617), (126, 0.33327770233154297), (116, 0.24738097190856934), (160, 0.42581772804260254), (118, 0.27059125900268555), (166, 0.2383410930633545), (147, 0.22490859031677246), (125, 0.18024492263793945), (163, 0.22067952156066895), (108, 0.1673586368560791), (116, 0.1725161075592041), (176, 0.25670957565307617), (159, 0.2186267375946045), (124, 0.17196393013000488), (144, 0.23643088340759277), (155, 0.2156848907470703), (178, 0.25284576416015625), (145, 0.23620200157165527), (38, 0.05965781211853027)][0m
+[[34m2026-08-09T18:04:04.369+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:04:04.372+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:04:14.149+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:04:14.152+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:04:14.186+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:04:14.189+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:04:14.224+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:04:14.226+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[[34m2026-08-09T18:04:14.307+0000[0m] {[34mfilebasedsink.py:[0m310} INFO[0m - Starting finalize_write threads with num_shards: 1 (skipped: 0), batches: 1, num_threads: 1[0m
+[[34m2026-08-09T18:04:14.310+0000[0m] {[34mfilebasedsink.py:[0m357} INFO[0m - Renamed 1 shards in 0.00 seconds.[0m
+[2026-08-09 18:04:14,339] {python.py:194} INFO - Done. Returned value was: None
+[[34m2026-08-09T18:04:14.339+0000[0m] {[34mpython.py:[0m194} INFO[0m - Done. Returned value was: None[0m
+[2026-08-09 18:04:14,343] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=bank_marketing_pipeline, task_id=Evaluator, execution_date=20240101T000000, start_date=, end_date=20260809T180414
+[[34m2026-08-09T18:04:14.343+0000[0m] {[34mtaskinstance.py:[0m1400} INFO[0m - Marking task as SUCCESS. dag_id=bank_marketing_pipeline, task_id=Evaluator, execution_date=20240101T000000, start_date=, end_date=20260809T180414[0m
+[[34m2026-08-09T18:04:14.356+0000[0m] {[34mdag.py:[0m3938} INFO[0m - Evaluator ran successfully![0m
+[[34m2026-08-09T18:04:14.357+0000[0m] {[34mdag.py:[0m3941} INFO[0m - *****************************************************[0m
+[[34m2026-08-09T18:04:14.362+0000[0m] {[34mdag.py:[0m3930} INFO[0m - *****************************************************[0m
+[[34m2026-08-09T18:04:14.362+0000[0m] {[34mdag.py:[0m3934} INFO[0m - Running task Pusher[0m
+[2026-08-09 18:04:14,400] {taskinstance.py:1662} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='bank_marketing_pipeline' AIRFLOW_CTX_TASK_ID='Pusher' AIRFLOW_CTX_EXECUTION_DATE='2024-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-01T00:00:00+00:00'
+[[34m2026-08-09T18:04:14.400+0000[0m] {[34mtaskinstance.py:[0m1662} INFO[0m - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='airflow' AIRFLOW_CTX_DAG_ID='bank_marketing_pipeline' AIRFLOW_CTX_TASK_ID='Pusher' AIRFLOW_CTX_EXECUTION_DATE='2024-01-01T00:00:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-01-01T00:00:00+00:00'[0m
+[2026-08-09 18:04:14,465] {python.py:194} INFO - Done. Returned value was: None
+[[34m2026-08-09T18:04:14.465+0000[0m] {[34mpython.py:[0m194} INFO[0m - Done. Returned value was: None[0m
+[2026-08-09 18:04:14,469] {taskinstance.py:1400} INFO - Marking task as SUCCESS. dag_id=bank_marketing_pipeline, task_id=Pusher, execution_date=20240101T000000, start_date=, end_date=20260809T180414
+[[34m2026-08-09T18:04:14.469+0000[0m] {[34mtaskinstance.py:[0m1400} INFO[0m - Marking task as SUCCESS. dag_id=bank_marketing_pipeline, task_id=Pusher, execution_date=20240101T000000, start_date=, end_date=20260809T180414[0m
+[[34m2026-08-09T18:04:14.485+0000[0m] {[34mdag.py:[0m3938} INFO[0m - Pusher ran successfully![0m
+[[34m2026-08-09T18:04:14.486+0000[0m] {[34mdag.py:[0m3941} INFO[0m - *****************************************************[0m
+[[34m2026-08-09T18:04:14.490+0000[0m] {[34mdagrun.py:[0m653} INFO[0m - Marking run <DagRun bank_marketing_pipeline @ 2024-01-01T00:00:00+00:00: manual__2024-01-01T00:00:00+00:00, state:running, queued_at: None. externally triggered: False> successful[0m
+[[34m2026-08-09T18:04:14.491+0000[0m] {[34mdagrun.py:[0m704} INFO[0m - DagRun Finished: dag_id=bank_marketing_pipeline, execution_date=2024-01-01T00:00:00+00:00, run_id=manual__2024-01-01T00:00:00+00:00, run_start_date=2024-01-01T00:00:00+00:00, run_end_date=2026-08-09 18:04:14.490990+00:00, run_duration=82231454.49099, state=success, external_trigger=False, run_type=manual, data_interval_start=2024-01-01T00:00:00+00:00, data_interval_end=2024-01-01T00:00:00+00:00, dag_hash=None[0m
+
+
+STDERR:
+/content/tfx_env/lib/python3.10/site-packages/pydantic/_internal/_config.py:317 UserWarning: Valid config keys have changed in V2:
+* 'orm_mode' has been renamed to 'from_attributes'
+2026-08-09 18:01:33.784075: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2026-08-09 18:01:33.869575: E external/local_xla/xla/stream_executor/cuda/cuda_dnn.cc:9261] Unable to register cuDNN factory: Attempting to register factory for plugin cuDNN when one has already been registered
+2026-08-09 18:01:33.869730: E external/local_xla/xla/stream_executor/cuda/cuda_fft.cc:607] Unable to register cuFFT factory: Attempting to register factory for plugin cuFFT when one has already been registered
+2026-08-09 18:01:33.871534: E external/local_xla/xla/stream_executor/cuda/cuda_blas.cc:1515] Unable to register cuBLAS factory: Attempting to register factory for plugin cuBLAS when one has already been registered
+2026-08-09 18:01:33.883076: I external/local_tsl/tsl/cuda/cudart_stub.cc:31] Could not find cuda drivers on your machine, GPU will not be used.
+2026-08-09 18:01:33.883539: I tensorflow/core/platform/cpu_feature_guard.cc:182] This TensorFlow binary is optimized to use available CPU instructions in performance-critical operations.
+To enable the following instructions: AVX2 FMA, in other operations, rebuild TensorFlow with the appropriate compiler flags.
+/content/tfx_env/lib/python3.10/site-packages/google/api_core/_python_version_support.py:254 FutureWarning: You are using a Python version (3.10.12) which Google will stop supporting in new releases of google.api_core once it reaches its end of life (2026-10-04). Please upgrade to the latest Python version, or at least Python 3.11, to continue receiving updates for google.api_core past that date.
+2026-08-09 18:01:36.218919: W tensorflow/compiler/tf2tensorrt/utils/py_utils.cc:38] TF-TRT Warning: Could not find TensorRT
+/content/tfx_env/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:90: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()
+/content/tfx_env/lib/python3.10/site-packages/setuptools/_distutils/cmd.py:90: SetuptoolsDeprecationWarning: setup.py install is deprecated.
+!!
+
+        ********************************************************************************
+        Please avoid running ``setup.py`` directly.
+        Instead, use pypa/build, pypa/installer or other
+        standards-based tools.
+
+        This deprecation is overdue, please update your project and remove deprecated
+        calls to avoid build errors in the future.
+
+        See https://blog.ganssle.io/articles/2021/10/setup-py-deprecated.html for details.
+        ********************************************************************************
+
+!!
+  self.initialize_options()

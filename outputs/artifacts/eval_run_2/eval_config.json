@@ -46,6 +46,6 @@
   "dataLocation": "<user provided PCollection>",
   "fileFormat": "<unknown>",
   "modelLocations": {
-    "": "/content/pipelines/bank_marketing_pipeline/Trainer/model/43/Format-Serving"
+    "": "/content/pipelines/bank_marketing_pipeline/Trainer/model/29/Format-Serving"
   }
 }
