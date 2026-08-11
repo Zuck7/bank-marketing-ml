@@ -1,319 +1,262 @@
 # Bank Marketing ML Pipeline
 
-> End-to-end production ML pipeline using TFX and Apache Airflow to predict term deposit subscriptions from bank marketing campaign data.
-
-Built for COMP315 (AI Software Test & ML/Ops) at Centennial College, Fall 2026.
+A production ML pipeline that predicts whether a bank client will subscribe to a term deposit, built with TensorFlow Extended (TFX) and orchestrated by Apache Airflow.
 
 ---
 
-## What This Project Does
+## The Problem
 
-A Portuguese bank ran phone-based marketing campaigns to sell term deposits. This project builds a fully automated ML pipeline that ingests the raw campaign data, validates its quality, engineers features, trains a neural network, evaluates the model for fairness across demographic slices, and deploys it to a serving directory — all orchestrated as a reproducible DAG.
+A Portuguese bank ran direct marketing campaigns via phone calls to sell term deposits. Often, multiple calls to the same client were needed. The dataset captures 45,211 client interactions with 16 features covering demographics, financial status, and campaign history.
 
-The pipeline achieves **91.4% accuracy** and **0.90 AUC** on the validation set, with TFMA analysis revealing performance gaps across education levels, marital status, and job types.
+The classification goal: **predict if the client will subscribe** (`yes` / `no`).
 
----
-
-## Results
-
-### Model Performance
-
-| Metric | Run 1 (500 steps) | Run 2 (1000 steps) |
-|--------|-------------------|---------------------|
-| Binary Accuracy | 91.4% | 90.1% |
-| AUC | 0.900 | 0.907 |
-| Training Loss | 0.273 | 0.260 |
-| Validation Loss | 0.212 | 0.236 |
-
-Run 1 achieves higher accuracy; Run 2 achieves higher AUC. The slight accuracy drop in Run 2 with improved AUC suggests better calibration across the full prediction range at the cost of marginal accuracy on the majority class. This is a common tradeoff with imbalanced datasets (88% negative, 12% positive).
-
-### TFMA Slice Analysis
-
-The model was evaluated across education, marital status, and job type slices to detect fairness gaps:
-
-- **Education:** Tertiary-educated clients receive the most accurate predictions; primary education shows the widest performance gap
-- **Job type:** Students are the hardest slice to predict (76.1% accuracy) — 15 percentage points below the best-performing category
-- **Marital status:** Relatively uniform performance across married, single, and divorced groups
-
-These gaps are driven by class imbalance within slices — students and primary-education clients have different subscription patterns that the model struggles to learn from limited examples.
+The challenge: the dataset is heavily imbalanced — 88.3% of clients did not subscribe. A naive model predicting "no" for everyone gets 88% accuracy. The pipeline needs to do meaningfully better, and critically, it needs to perform fairly across different client segments.
 
 ---
 
-## Pipeline Architecture
+## The Data
 
-```
-bank-full.csv (45,211 rows, 17 features)
-       │
-       ▼
-┌─────────────┐     ┌────────────────┐     ┌────────────┐     ┌──────────────────┐
-│ CsvExampleGen│────▶│ StatisticsGen  │────▶│ SchemaGen   │────▶│ ExampleValidator │
-│ (Data Ingest)│     │ (Compute Stats)│     │(Infer Types)│     │ (Check Anomalies)│
-└─────────────┘     └────────────────┘     └────────────┘     └──────────────────┘
-       │                                          │
-       ▼                                          ▼
-┌─────────────┐                            ┌─────────────┐
-│  Transform   │◀───────────────────────────│   Schema     │
-│(Feature Eng.)│                            └─────────────┘
-└─────────────┘
-       │
-       ▼
-┌─────────────┐     ┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│   Trainer    │────▶│  Evaluator   │◀────│  Resolver    │     │   Pusher    │
-│ (Train Model)│     │  (TFMA Eval) │     │(Get Baseline)│     │  (Deploy)   │
-└─────────────┘     └─────────────┘                          └─────────────┘
-                           │                                        ▲
-                           │  blessed?                              │
-                           └────────────────────────────────────────┘
-```
-
-Each component produces versioned artifacts tracked by ML Metadata (MLMD). The Resolver retrieves the latest blessed model so the Evaluator can compare new models against baselines — preventing deployment of regressions.
+| Feature | Type | Description |
+|---------|------|-------------|
+| age | Numeric | Client age |
+| job | Categorical (12) | admin, blue-collar, technician, management, retired, student, etc. |
+| marital | Categorical (3) | married, single, divorced |
+| education | Categorical (4) | primary, secondary, tertiary, unknown |
+| default | Binary | Has credit in default? |
+| balance | Numeric | Average yearly balance (euros) |
+| housing | Binary | Has housing loan? |
+| loan | Binary | Has personal loan? |
+| contact | Categorical (3) | Contact type: cellular, telephone, unknown |
+| day | Numeric | Last contact day of month |
+| month | Categorical (12) | Last contact month |
+| duration | Numeric | Last contact duration (seconds) |
+| campaign | Numeric | Contacts during this campaign |
+| pdays | Numeric | Days since last contact from previous campaign (-1 = never contacted) |
+| previous | Numeric | Contacts before this campaign |
+| poutcome | Categorical (4) | Previous campaign outcome: success, failure, other, unknown |
+| **y** | **Target** | **Subscribed to term deposit?** |
 
 ---
 
-## Dataset
+## Feature Engineering
 
-**Source:** [Bank Marketing Dataset](http://hdl.handle.net/1822/14838) (Moro et al., 2011)
+Raw features are transformed into model-ready format through TensorFlow Transform. Every transformation gets baked into the SavedModel's serving graph — the same preprocessing runs automatically at prediction time, eliminating training/serving skew.
 
-| Property | Value |
-|----------|-------|
-| Records | 45,211 |
-| Features | 16 input + 1 target |
-| Target | `y` — subscribed to term deposit? (yes/no) |
-| Class Balance | 88.3% no, 11.7% yes |
-| Original Format | Semicolon-delimited CSV |
-
-**Preprocessing required:** The original CSV uses semicolons and text labels (`yes`/`no`). TFX's CsvExampleGen expects comma-delimited files with numeric labels. A preprocessing step converts the delimiter and maps `yes→1`, `no→0`.
-
-### Features
-
-**Numeric (7):** age, balance, day, duration, campaign, pdays, previous
-
-**Categorical (9):** job (12 vals), marital (3), education (4), default (2), housing (2), loan (2), contact (3), month (12), poutcome (4)
+| Transformation | Applied To | What It Does |
+|---------------|-----------|--------------|
+| Z-score scaling | All 7 numeric features | Centers each feature around 0 with standard deviation 1. Neural networks train faster when inputs are on similar scales — without this, `balance` (range: -8,019 to 102,127) would dominate `campaign` (range: 1 to 63). |
+| Vocabulary encoding | All 9 categorical features | Maps string categories to integer IDs. `"admin."` becomes `0`, `"blue-collar"` becomes `1`, etc. An out-of-vocabulary bucket catches unseen categories at serving time. |
+| Bucketization | age → 5 bins | Splits age into discrete groups (roughly: 18–30, 30–40, 40–50, 50–60, 60+). The relationship between age and term deposit subscription is non-linear — students and retirees behave differently from working-age clients, and buckets let the model learn this without assuming linearity. |
 
 ---
 
 ## Model Architecture
 
 ```
-Numeric features (7) ── z-score scaling ──────────────────┐
-                                                          │
-Categorical features (9) ── vocab lookup ── Embedding ── Flatten ─┤
-                                                          │
-Age ── bucketize (5 bins) ── Embedding ── Flatten ────────┤
-                                                          │
-                                                   Concatenate (37 dims)
-                                                          │
-                                                   Dense(128) + BatchNorm + Dropout(0.3)
-                                                          │
-                                                   Dense(64)  + BatchNorm + Dropout(0.2)
-                                                          │
-                                                   Dense(32)
-                                                          │
-                                                   Dense(1, sigmoid)
+Numeric features (7)                    Categorical features (9)           Engineered feature
+   age ──────┐                          job ──── Embed(13→6) ── Flat ─┐     age_bucket ── Embed(6→4) ── Flat ─┐
+   balance ──┤                          marital ─ Embed(4→2) ── Flat ─┤                                       │
+   day ──────┤                          education Embed(5→2) ── Flat ─┤                                       │
+   duration ─┤                          default ─ Embed(3→2) ── Flat ─┤                                       │
+   campaign ─┤                          housing ─ Embed(3→2) ── Flat ─┤                                       │
+   pdays ────┤                          loan ──── Embed(3→2) ── Flat ─┤                                       │
+   previous ─┘                          contact ─ Embed(4→2) ── Flat ─┤                                       │
+      │                                 month ─── Embed(13→6) ─ Flat ─┤                                       │
+      │                                 poutcome  Embed(5→2) ── Flat ─┘                                       │
+      │                                            │                                                           │
+      └────────────────────────────────────────────┴───────────────────────────────────────────────────────────┘
+                                                   │
+                                            Concatenate (37 dimensions)
+                                                   │
+                                            Dense(128, ReLU)
+                                            BatchNormalization
+                                            Dropout(0.3)
+                                                   │
+                                            Dense(64, ReLU)
+                                            BatchNormalization
+                                            Dropout(0.2)
+                                                   │
+                                            Dense(32, ReLU)
+                                                   │
+                                            Dense(1, Sigmoid) → prediction
 ```
+
+### Design Decisions
+
+**Embeddings instead of one-hot encoding.** One-hot encoding `job` creates a sparse 12-dimensional vector where each dimension is independent. An embedding maps the 12 job types into a dense 6-dimensional space where similar jobs (e.g., `admin` and `management`) can end up near each other. This gives the model capacity to learn relationships between categories while using fewer parameters.
+
+**Batch normalization after each dense layer.** The numeric inputs arrive z-scored, but embedding outputs are randomly initialized and learned during training. These start on different scales. Batch normalization re-centers and re-scales activations between layers, stabilizing training and allowing higher learning rates.
+
+**Progressive dropout (0.3 → 0.2).** Higher dropout in earlier layers provides stronger regularization where the feature space is widest (37 → 128 dimensions). Lower dropout in later layers preserves more of the abstract representations the model has learned.
+
+**Early stopping with patience 5.** Monitors validation loss and stops training if it doesn't improve for 5 consecutive evaluation rounds, then restores the best weights. This prevents overfitting on a dataset where 88% of examples are the same class.
+
+### Model Size
 
 | Property | Value |
 |----------|-------|
 | Total Parameters | 16,235 (63.42 KB) |
 | Trainable Parameters | 15,851 |
-| Optimizer | Adam (lr=0.001) |
-| Loss | Binary Crossentropy |
-| Callbacks | TensorBoard, Early Stopping (patience=5) |
+| Non-trainable Parameters | 384 (BatchNorm stats) |
+| Optimizer | Adam (learning rate: 0.001) |
+| Loss Function | Binary Crossentropy |
 
-**Why embeddings over one-hot?** One-hot encoding `job` (12 categories) creates a sparse 12-dimensional vector. An embedding maps it to a dense 6-dimensional space where semantically similar jobs can cluster together, giving the model more expressive power with fewer parameters.
-
-**Why batch normalization?** Normalizes activations between layers to stabilize training and allow higher learning rates. Particularly helpful when combining numeric features (already z-scored) with embedding outputs (learned during training) that start on different scales.
+The model is deliberately small. For tabular data with 16 features and 45K rows, larger models overfit. The architecture choices — embeddings, batch normalization, dropout — matter far more than adding layers.
 
 ---
 
-## Feature Engineering (Transform Module)
+## Training Results
 
-All transformations are baked into the SavedModel's serving graph via TensorFlow Transform, eliminating training/serving skew:
+### Run 1: 500 Training Steps
 
-| Transformation | Features | Purpose |
-|---------------|----------|---------|
-| `scale_to_z_score` | All 7 numeric | Center around 0 with std=1 so no feature dominates by scale |
-| `compute_and_apply_vocabulary` | All 9 categorical | Convert strings to integer IDs with OOV bucket for unseen values |
-| `bucketize` | age (5 bins) | Capture non-linear age-subscription relationship (students, working age, retired) |
+```
+500/500 ━━━━━━━━━━━━━━━━━━━━ 9s 13ms/step
+
+Training:     loss: 0.2727  accuracy: 88.4%  AUC: 0.848
+Validation:   loss: 0.2118  accuracy: 91.4%  AUC: 0.900
+```
+
+### Run 2: 1000 Training Steps
+
+```
+1000/1000 ━━━━━━━━━━━━━━━━━━━━ 12s 9ms/step
+
+Training:     loss: 0.2600  accuracy: 88.7%  AUC: 0.867
+Validation:   loss: 0.2359  accuracy: 90.1%  AUC: 0.907
+```
+
+### What the Numbers Mean
+
+| Metric | Run 1 | Run 2 | Interpretation |
+|--------|-------|-------|----------------|
+| Val Accuracy | **91.4%** | 90.1% | Run 1 classifies more examples correctly overall |
+| Val AUC | 0.900 | **0.907** | Run 2 ranks positive vs negative examples better |
+| Val Loss | **0.212** | 0.236 | Run 1 is more confident in its correct predictions |
+| Train Loss | 0.273 | **0.260** | Run 2 fits the training data slightly better |
+
+**Why does Run 2 have lower accuracy but higher AUC?** With more training steps, the model improves its ability to rank predictions (AUC goes up) but starts to overfit slightly on the majority class, reducing accuracy on borderline cases. For an imbalanced dataset, **AUC is the more reliable metric** because accuracy can be inflated by always predicting the majority class.
+
+**No overfitting.** In both runs, validation loss is lower than training loss. This means the model generalizes well to unseen data — dropout and batch normalization are doing their job.
 
 ---
 
-## Airflow Orchestration
+## Fairness Analysis (TFMA Slicing)
 
-The pipeline runs as an Airflow DAG where each TFX component is an individual task with dependency tracking:
+The model was evaluated not just on overall performance, but across demographic and professional slices. A model can look great at 91% overall while hiding poor performance for specific groups.
 
-```
-CsvExampleGen → StatisticsGen → SchemaGen → ExampleValidator
-                                    ↓
-                                Transform → Trainer → Resolver
-                                                ↓         ↓
-                                            Evaluator ←───┘
-                                                ↓
-                                             Pusher
-```
+### By Education Level
 
-Airflow provides scheduling, retry logic, dependency resolution, and monitoring. The DAG is configured with `schedule_interval=None` (manual trigger only) for this project.
+| Slice | Accuracy | AUC | Example Count |
+|-------|----------|-----|---------------|
+| Tertiary | Highest | Highest | ~14,000 |
+| Secondary | Middle | Middle | ~23,000 |
+| Primary | Lowest | Lowest | ~6,800 |
+| Unknown | Variable | Variable | ~1,800 |
 
-**DAG test run:** All 9 tasks completed successfully, with each task logged as `Marking task as SUCCESS` and the run finishing with `DagRun Finished: state:success`.
+Tertiary-educated clients are the easiest to predict — they also have the highest subscription rate. Primary-education clients show the widest performance gap, likely because their subscription patterns differ from the majority but there are fewer examples to learn from.
 
----
+### By Job Type
 
-## Project Structure
+| Observation | Detail |
+|-------------|--------|
+| Hardest slice | **Students** at 76.1% accuracy — 15 points below the best |
+| Best-performing | Service workers and retirees |
+| Largest groups | Blue-collar (~9,700) and management (~9,400) |
+| Smallest groups | Students (~938) and unemployed (~1,300) |
 
-```
-COMP315_Project/
-├── data/
-│   ├── bank-full.csv                  # Original dataset (semicolons)
-│   └── processed/
-│       └── bank_marketing.csv         # Preprocessed (commas, numeric labels)
-├── modules/
-│   ├── transform_module.py            # preprocessing_fn — feature engineering
-│   └── trainer_module.py              # run_fn — Keras model + TensorBoard
-├── pipeline/
-│   └── pipeline.py                    # create_pipeline() for Airflow
-├── dags/
-│   └── bank_marketing_dag.py          # Airflow DAG definition
-├── notebooks/
-│   └── phase1-3_pipeline.ipynb        # Full pipeline execution notebook
-├── outputs/
-│   ├── artifacts/
-│   │   ├── eval_run_1/                # TFMA results (500 steps)
-│   │   ├── eval_run_2/                # TFMA results (1000 steps)
-│   │   ├── model_run_1/               # TensorBoard logs (500 steps)
-│   │   ├── model_run_2/               # TensorBoard logs (1000 steps)
-│   │   └── trained_model/             # Exported SavedModel
-│   └── screenshots/
-│       ├── airflow_dag_graph.png       # DAG component graph
-│       └── airflow_dag_run_log.txt     # Full Airflow run log
-├── requirements.txt
-└── README.md
-```
+Students have a high subscription rate relative to their group size, making them an unusual pattern the model struggles with. The small sample size compounds this — the model sees fewer examples to learn the student pattern.
+
+### By Marital Status
+
+Performance is relatively uniform across married, single, and divorced groups. This is the fairest dimension — the model does not appear to discriminate based on marital status.
+
+### Implications
+
+The fairness gaps are driven by two factors: class imbalance within slices (some groups have very different subscription rates) and sample size (smaller groups have noisier signal). Production mitigations would include class weighting, oversampling underrepresented groups (SMOTE), or training separate models for high-variance slices.
 
 ---
 
-## Environment Setup
+## Pipeline Components
 
-TFX 1.15.0 requires Python 3.10 and has strict version pins across its entire dependency chain. Google Colab runs Python 3.12, so the pipeline runs inside a Python 3.10 virtual environment.
+The pipeline automates the entire ML workflow through 9 sequential components, each producing versioned artifacts tracked by ML Metadata:
 
-### Why Python 3.10?
+### Phase 1: Data Validation
 
-`ml-metadata`, a C++ compiled package that TFX uses to track artifacts, only has pre-built wheels for Python ≤3.10. No amount of pip configuration can work around a missing binary wheel — the version constraint is hard.
+**ExampleGen** ingests the CSV, splits it into train (2/3) and eval (1/3) sets, and converts to TFRecord format. TFRecords are TensorFlow's optimized binary storage — faster to read during training than CSV.
 
-### Setup (Google Colab)
+**StatisticsGen** computes per-feature statistics: min, max, mean, standard deviation, missing value counts, and distributions. This produces a quantitative profile of the data.
 
-```bash
-# Create Python 3.10 venv (Colab has 3.10 via Ubuntu 22.04)
-sudo apt install python3.10-venv -y
-python3.10 -m venv /content/tfx_env --without-pip
-curl -sS https://bootstrap.pypa.io/get-pip.py | /content/tfx_env/bin/python3.10
+**SchemaGen** infers what the data should look like: which features exist, their types (int, float, string), expected ranges, and vocabularies for categorical columns. This schema acts as a contract for the data.
 
-# Install TFX with pinned dependencies (--no-deps to bypass resolver)
-/content/tfx_env/bin/pip install --no-deps tfx==1.15.0 tensorflow==2.15.0 ...
+**ExampleValidator** compares actual statistics against the schema and flags anomalies — missing values, wrong types, values outside expected ranges. Result: **no anomalies detected** in this dataset.
+
+### Phase 2: Model Training & Deployment
+
+**Transform** applies feature engineering (z-scoring, vocabulary encoding, bucketization) and materializes the transformations into a graph that ships with the model.
+
+**Trainer** builds and trains the Keras model, logging metrics to TensorBoard. Produces a SavedModel with a serving signature that includes the Transform preprocessing.
+
+**Resolver** looks up ML Metadata to find the most recently blessed model as a baseline. On the first run, no baseline exists — the Evaluator auto-blesses.
+
+**Evaluator** runs TFMA with slicing across education, marital status, and job type. Computes BinaryAccuracy and AUC per slice. Determines whether the new model should be blessed.
+
+**Pusher** copies the blessed model to the serving directory. If the model was not blessed (failed to beat the baseline), nothing gets deployed.
+
+### Phase 3: Orchestration
+
+All 9 components are wrapped in an **Apache Airflow DAG** where each component becomes a task with dependency tracking. The DAG was tested via Airflow CLI with all tasks completing successfully.
+
+---
+
+## Artifact Lineage
+
+Every pipeline run records a complete lineage chain in ML Metadata:
+
+```
+Raw CSV → ExampleGen artifacts → Statistics → Schema → Anomalies
+    → Transform graph → Transformed examples
+        → Trained model → Model evaluation → Blessing decision
+            → Pushed model (if blessed)
 ```
 
-The full dependency list is in the notebook's Cell 2. The `--no-deps` flag is necessary because pip's dependency resolver enters an infinite backtracking loop when resolving the TFX + Apache Beam + Google Cloud dependency tree. Every package is pinned to an exact compatible version instead.
+After multiple runs, the metadata store contains the full history: which data was used, what schema was inferred, which model was trained with which hyperparameters, whether it was blessed, and where it was deployed. This makes any past run fully reproducible and auditable.
+
+---
+
+## What We Would Change for Production
+
+**Address class imbalance.** The 88/12 split means the model sees 7x more negative examples. Class weighting (`class_weight={0: 1, 1: 7.5}`) or SMOTE oversampling would help the model learn the minority pattern better, particularly for underperforming slices like students.
+
+**Add model monitoring.** Deploy with a monitoring system that tracks prediction distributions over time. If the distribution of predicted probabilities shifts (data drift) or the feature distributions change (concept drift), trigger automatic retraining.
+
+**A/B testing before rollout.** Instead of replacing the old model entirely, route a percentage of traffic to the new model and compare real-world conversion rates before full deployment.
+
+**CI/CD pipeline.** Automate the retrain → evaluate → deploy cycle so new data triggers a pipeline run without manual intervention. The TFX pipeline already supports this — it just needs a scheduler.
+
+**Remove duration feature.** `duration` (call length in seconds) is only known after the call ends, making it unavailable at prediction time for new campaigns. Including it inflates model performance. A production model should be retrained without it.
 
 ---
 
 ## Tech Stack
 
-| Component | Version | Purpose |
-|-----------|---------|---------|
-| TFX | 1.15.0 | ML pipeline framework |
-| TensorFlow | 2.15.0 | Model training and serving |
-| TensorFlow Transform | 1.15.0 | Feature engineering with serving graph |
-| TFMA | 0.46.0 | Model evaluation, slicing, fairness |
-| TFDV | 1.15.1 | Data validation and anomaly detection |
-| Apache Beam | 2.56.0 | Distributed data processing backend |
-| Apache Airflow | 2.7.3 | Pipeline orchestration and scheduling |
-| ML Metadata | 1.15.0 | Artifact lineage tracking |
-| Keras | 2.15.0 | Neural network API |
-| Python | 3.10.12 | Runtime (venv inside Colab's 3.12) |
+| Component | Version | Role |
+|-----------|---------|------|
+| TFX | 1.15.0 | Pipeline framework |
+| TensorFlow | 2.15.0 | Model training |
+| TF Transform | 1.15.0 | Feature engineering |
+| TFMA | 0.46.0 | Evaluation & fairness |
+| TFDV | 1.15.1 | Data validation |
+| Apache Beam | 2.56.0 | Data processing |
+| Apache Airflow | 2.7.3 | Orchestration |
+| ML Metadata | 1.15.0 | Artifact tracking |
+| Python | 3.10 | Runtime |
 
 ---
 
-## Challenges & Solutions
+## Reference
 
-### TFX Won't Install on Python 3.12
-**Problem:** `ml-metadata` has no wheel for Python 3.12. pip fails with `No matching distribution found`.
-**Solution:** Created a Python 3.10 virtual environment inside Colab using Ubuntu's built-in Python 3.10, bootstrapped pip manually, and ran all TFX code through the venv via subprocess.
-
-### pip Dependency Resolution Infinite Loop
-**Problem:** TFX's dependency tree (TFX → Apache Beam[GCP] → 50+ Google Cloud packages) causes pip to backtrack through thousands of version combinations, eventually hitting `resolution-too-deep`.
-**Solution:** Pre-installed all packages with exact pinned versions using `--no-deps`, then fixed missing transitive dependencies individually.
-
-### InteractiveContext Only Works in Jupyter
-**Problem:** TFX's `InteractiveContext.run()` is a no-op outside IPython/Jupyter. Since the pipeline runs in a subprocess (separate Python 3.10 process), `context.run()` silently does nothing.
-**Solution:** Switched to `LocalDagRunner` which executes components as a proper pipeline without requiring a notebook kernel.
-
-### Airflow Webserver Timeout on Colab Free Tier
-**Problem:** Gunicorn workers timeout after 120 seconds on Colab's limited CPU, crashing the Airflow web UI before it finishes loading.
-**Solution:** Used Airflow CLI commands (`airflow dags show`, `airflow dags test`) to generate the DAG graph image and run the pipeline directly, bypassing the web UI entirely.
-
-### Protobuf Version Conflicts
-**Problem:** Installing Google Cloud packages pulls in `protobuf 6.x`, but TFX 1.15.0 requires `protobuf <5`. pip's resolver doesn't catch this because of `--no-deps`.
-**Solution:** Added a "fix overwrites" step that forces `protobuf==4.25.9` back after installing packages that might upgrade it.
+Moro, S., Laureano, R., & Cortez, P. (2011). Using Data Mining for Bank Direct Marketing: An Application of the CRISP-DM Methodology. *Proceedings of the European Simulation and Modelling Conference — ESM'2011*, pp. 117-121. EUROSIS.
 
 ---
 
-## Key Takeaways
-
-1. **Data validation catches what manual inspection misses.** ExampleValidator compares every feature's statistics against an inferred schema automatically. In production, this runs on every new data batch before training begins.
-
-2. **Overall accuracy hides fairness gaps.** A model at 91% overall can be 76% for students. TFMA's slicing metrics make this visible without writing custom evaluation code.
-
-3. **Transform eliminates training/serving skew.** Feature preprocessing (z-scoring, vocabulary encoding, bucketization) is baked into the SavedModel. The exact same transformations run at prediction time with zero additional code.
-
-4. **ML infrastructure is harder than ML modeling.** The model architecture took 30 minutes to write. Getting TFX, its 50+ dependencies, Airflow, and Python version constraints to work together took significantly longer. This is representative of real-world ML engineering.
-
-5. **Artifact lineage enables reproducibility.** Every pipeline run records which data was used, what schema was inferred, which model was trained, whether it was blessed, and where it was deployed. ML Metadata makes this queryable.
-
----
-
-## How to Reproduce
-
-1. Upload `bank-full.csv` to `COMP315_Project/data/` on Google Drive
-2. Upload `transform_module.py` and `trainer_module.py` to `COMP315_Project/modules/`
-3. Open `phase1-3_pipeline.ipynb` in Google Colab
-4. Run cells 1–8 sequentially (total time: ~30 minutes)
-5. Artifacts appear in `COMP315_Project/outputs/artifacts/` on Drive
-
----
-
-## FAQ
-
-**Q: Why not just use a Jupyter notebook with scikit-learn?**
-A: The point of TFX is to build a production pipeline, not just train a model. In industry, models need automated data validation, reproducible training, baseline comparison before deployment, and artifact tracking. TFX provides all of this as infrastructure.
-
-**Q: Why is the model relatively simple (3 dense layers)?**
-A: For tabular data with 16 features, a 16K-parameter network is appropriately sized. Larger models overfit on this dataset. The architecture choices (embeddings for categoricals, batch normalization, dropout) matter more than depth.
-
-**Q: Why does the second run (1000 steps) have slightly lower accuracy but higher AUC?**
-A: More training steps improve the model's ranking ability (AUC) but can slightly overfit on the majority class (no-subscription), reducing accuracy on the minority class. For an imbalanced dataset, AUC is the more meaningful metric.
-
-**Q: What would you change for production?**
-A: Add data versioning (DVC), model monitoring for drift detection, A/B testing before full rollout, a CI/CD pipeline for model retraining, and class weighting or SMOTE to address the 88/12 imbalance.
-
-**Q: Why LocalDagRunner instead of running Airflow end-to-end?**
-A: Both use the same pipeline definition and produce identical results. LocalDagRunner runs components sequentially in a single process (simpler for development). Airflow runs them as separate tasks with scheduling, retries, and monitoring (necessary for production). We demonstrated both.
-
-**Q: What does "blessed" mean in the context of the Evaluator?**
-A: A model is "blessed" when it passes the Evaluator's quality checks — meaning it performs at least as well as the current baseline model. Only blessed models are deployed by the Pusher. This prevents deploying a model that regressed in performance.
-
-**Q: How does the pipeline handle unseen categorical values at serving time?**
-A: The Transform module's `compute_and_apply_vocabulary` uses `num_oov_buckets=1`, which creates a dedicated bucket for out-of-vocabulary values. Any category not seen during training gets mapped to this OOV bucket rather than causing an error.
-
-**Q: Why does CsvExampleGen need a separate subfolder?**
-A: CsvExampleGen reads every CSV file in the directory you point it to. If the original semicolon-delimited `bank-full.csv` is in the same folder as the preprocessed `bank_marketing.csv`, it tries to parse both and fails on the semicolons.
-
----
-
-## References
-
-Moro, S., Laureano, R., & Cortez, P. (2011). Using Data Mining for Bank Direct Marketing: An Application of the CRISP-DM Methodology. *Proceedings of the European Simulation and Modelling Conference — ESM'2011*, pp. 117-121, Guimaraes, Portugal. EUROSIS. [http://hdl.handle.net/1822/14838](http://hdl.handle.net/1822/14838)
-
----
-
-## Authors
-
-COMP315 AI Software Test & ML/Ops — Centennial College, Fall 2026
+*COMP315 AI Software Test & ML/Ops — Centennial College, Fall 2026*
